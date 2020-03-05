@@ -17,6 +17,7 @@ from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
+from sklearn.svm import LinearSVC
 warnings.filterwarnings("ignore", category=UserWarning)
 
 
@@ -142,6 +143,47 @@ def trainMNB(data, labels, target_class, test_size):
     print(classification_report(Y_test, pipe_GS_MNB_predicted))
 
 
+def trainLSVC(data, labels, target_class, test_size):
+    """
+    Train and test the performance of LinearSVC with various parameter
+    combinations.
+    """
+    X_train, X_test, Y_train, Y_test = trainTestSplit(
+        data, labels, target_class, test_size)
+
+    pipe_LSVC = Pipeline([
+        ("vect", CountVectorizer()),
+        ("tfidf", TfidfTransformer()),
+        ("clf", LinearSVC())
+    ])
+
+    # All combinations of these parameters will be tested
+    GS_LSVC_params = {
+        "vect__ngram_range": [(1, 1), (1, 2), (1, 3)],
+        "tfidf__use_idf": (True, False),
+        "clf__penalty": ("l1", "l2"),
+        "clf__loss": ("hinge", "squared_hinge"),
+        "clf__dual": (True, False),
+        "clf__tol": (1e-1, 1e-4, 1e-10),
+        "clf__multi_class": ("ovr", "crammer_singer"),
+        "clf__fit_intercept": (True, False)
+    }
+
+    # Test all combinations of GS_LSV_params using 10-fold CV and all available CPU's
+    pipe_GS_LSVC = GridSearchCV(pipe_LSVC, GS_LSVC_params, cv=10, n_jobs=-1)
+    pipe_GS_LSVC.fit(X_train, Y_train)
+
+    best_params = pipe_GS_LSVC.best_params_
+    print("Best Score for LinearSVC:")
+    print("    {}".format(pipe_GS_LSVC.best_score_))
+    print("Best Parameters for LinearSVC:")
+    for p in sorted(GS_LSVC_params.keys()):
+        print("    {}: {}".format(p, best_params[p]))
+
+    pipe_GS_LSVC_predicted = pipe_GS_LSVC.predict(X_test)
+    print(classification_report(Y_test, peipe_GS_LSVC_predicted))
+
+
 def trainLinear(data, labels, target_class, test_size):
     """
     Train and test the performance of SGDClassifier (various linear models) with
@@ -198,4 +240,6 @@ if __name__ == "__main__":
             trainMNB(data, labels, args[2], 0.33)
         elif args[1] == "linear":
             trainLinear(data, labels, args[2], 0.33)
+        elif args[1] == "lsvc":
+            trainLSVC(data, labels, args[2], 0.33)
 
