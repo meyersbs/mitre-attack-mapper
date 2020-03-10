@@ -34,7 +34,7 @@ DATASET INFO:
 
 Running `./main.py train <model_type> <target_label>` will train a simple bag-of-words model on the event data, and then run cross validation on many combinations of model parameters. The best model parameters and the classification report (precision, recall, F1-score, etc.) will be printed out.
 
-Currently implemented model types are: `nb` ([naive bayes](https://scikit-learn.org/stable/modules/generated/sklearn.naive\_bayes.MultinomialNB.html)), `linear` ([various linear models](https://scikit-learn.org/stable/modules/generated/sklearn.linear\_model.SGDClassifier.html)). `nb` takes about 2 minutes to run. `linear` takes significantly longer -- I'll be refactoring to fix that.
+Currently implemented model types are: `nb` ([naive bayes](https://scikit-learn.org/stable/modules/generated/sklearn.naive\_bayes.MultinomialNB.html)), `lsvc` ([linear SVC](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC)).
 
 Valid target labels are: `tactics`, `techniques`.
 
@@ -73,3 +73,17 @@ Credential Access, Lateral Movement, Lateral Movement       0.78      0.70      
                                             macro avg       0.26      0.32      0.26        87
                                          weighted avg       0.60      0.63      0.60        87
 ```
+
+## Runtimes
+
+| Command  | Model         | Runtime     |
+|----------|---------------|-------------|
+| `nb`     | MultinomialNB | ~2 minutes  |
+| `lsvc`   | LinearSVC     | ~25 minutes |
+| `linear` | Various       | too long    |
+
+## Results
+
+### MultinomialNB
+
+### LinearSVC

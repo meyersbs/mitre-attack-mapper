@@ -81,6 +81,50 @@ def printStats(data, labels):
         print("    '{}': {}".format(k_techniques[i], v_techniques[i]))
 
 
+def preprocessData(data):
+    """
+    Clean up the data by replacing timestamps and IP addresses with unique
+    tokens.
+
+    GIVEN:
+      data (list)       list of events
+
+    RETURN:
+      new_data (list)   copy of `data` with timestamps and IP addresses
+                        cleaned up
+    """
+    new_data = data
+
+    # Replace timestamps with '<<TIMESTAMP>>'
+    # Replace IP addresses with '<<ATTACKER>>' or '<<DEFENDER>>'
+
+    return new_data
+
+
+def augmentData(data, labels, target_class):
+    """
+    Add the Tactic or Technique to the data.
+    
+    GIVEN:
+      data (list)           list of events
+      labels (dict)         human-annotated labels for data
+      target_class (str)    one of ["tactics", "techniques"]
+
+    RETURN:
+      new_data (list)       copy of `data` with tactics/techniques appended
+    """
+    new_data = data
+
+    if target_class == "tactics":
+        for i in range(0, len(data)):
+            new_data[i] = new_data[i] + " " + labels["techniques"][i]
+    else:
+        for i in range(0, len(data)):
+            new_data[i] = new_data[i] + " " + labels["tactics"][i]
+
+    return new_data
+
+
 def trainTestSplit(data, labels, target_class, test_size):
     """
     Split the data and it's labels into training and testing sets.
@@ -104,6 +148,7 @@ def trainTestSplit(data, labels, target_class, test_size):
 
     return X_train, X_test, Y_train, Y_test
 
+
 def trainMNB(data, labels, target_class, test_size):
     """
     Train and test the performance of MultinomialNB with various parameter
@@ -119,10 +164,15 @@ def trainMNB(data, labels, target_class, test_size):
     ])
     
     # All combinations of these parameters will be tested
+    # 3 * 2 * 3 * 3 * 2 * 2 * 8 * 2 = 3456 
     GS_MNB_params = {
         "vect__ngram_range": [(1, 1), (1, 2), (1, 3)], # Unigrams, Bigrams, Trigrams
+        "vect__stop_words": (None, "english"),
+        "vect__strip_accents": (None, "ascii", "unicode"),
+        "vect__analyzer": ("word", "char", "char_wb"),
+        "vect__lowercase": (True, False),
         "tfidf__use_idf": (True, False),
-        "clf__alpha": (0.01, 0.05, 0.1, 0.3, 0.5, 0.7, 0.9, 0.95, 0.99, 1),
+        "clf__alpha": (0.01, 0.05, 0.1, 0.5, 0.9, 0.95, 0.99, 1),
         "clf__fit_prior": (True, False)
     }
 
@@ -158,15 +208,21 @@ def trainLSVC(data, labels, target_class, test_size):
     ])
 
     # All combinations of these parameters will be tested
+    # 3 * 2 * 3 * 3 * 2 * 2 * 2 * 2 * 2 * 3 * 2 * 2 * 2 = 41472
     GS_LSVC_params = {
         "vect__ngram_range": [(1, 1), (1, 2), (1, 3)],
+        "vect__stop_words": (None, "english"),
+        "vect__strip_accents": (None, "ascii", "unicode"),
+        "vect__analyzer": ("word", "char", "char_wb"),
+        "vect__lowercase": (True, False),
         "tfidf__use_idf": (True, False),
         "clf__penalty": ("l1", "l2"),
         "clf__loss": ("hinge", "squared_hinge"),
         "clf__dual": (True, False),
         "clf__tol": (1e-1, 1e-4, 1e-10),
         "clf__multi_class": ("ovr", "crammer_singer"),
-        "clf__fit_intercept": (True, False)
+        "clf__fit_intercept": (True, False),
+        "clf__max_iter": (1000, 5000)
     }
 
     # Test all combinations of GS_LSV_params using 10-fold CV and all available CPU's
@@ -181,51 +237,7 @@ def trainLSVC(data, labels, target_class, test_size):
         print("    {}: {}".format(p, best_params[p]))
 
     pipe_GS_LSVC_predicted = pipe_GS_LSVC.predict(X_test)
-    print(classification_report(Y_test, peipe_GS_LSVC_predicted))
-
-
-def trainLinear(data, labels, target_class, test_size):
-    """
-    Train and test the performance of SGDClassifier (various linear models) with
-    various parameter combinations.
-    """
-    X_train, X_test, Y_train, Y_test = trainTestSplit(
-        data, labels, target_class, test_size)
-
-    pipe_SGD = Pipeline([
-        ("vect", CountVectorizer()),
-        ("tfidf", TfidfTransformer()),
-        ("clf", SGDClassifier())
-    ])
-
-    # All combinations of these parameters will be tested
-    GS_SGD_params = {
-        "vect__ngram_range": [(1, 1), (1, 2), (1, 3)],
-        "tfidf__use_idf": (True, False),
-        "clf__loss": ("hinge", "log", "modified_huber", "squared_hinge", "perceptron", "squared_loss", "huber", "epsilon_insensitive", "squared_epsilon_insensitive"),
-        "clf__l1_ratio": (0.01, 0.1, 0.5, 0.9, 0.99),
-        "clf__fit_intercept": (True, False),
-        "clf__alpha": (1e-2, 1e-3),
-        "clf__penalty": ("l1", "l2", "elasticnet"),
-        "clf__max_iter": (100, 500, 1000),
-        "clf__tol": (None, 1e-1, 1e-2, 1e-3),
-        "clf__eta0": (0.1, 0.5, 0.9, 1),
-        "clf__learning_rate": ("constant", "optimal", "invscaling", "adaptive")
-    }
-
-    # Test all combinations of GS_SGD_params using 10-fold CV and all available CPU's
-    pipe_GS_SGD = GridSearchCV(pipe_SGD, GS_SGD_params, cv=10, n_jobs=-1)
-    pipe_GS_SGD.fit(X_train, Y_train)
-
-    best_params = pipe_GS_SGD.best_params_
-    print("Best Score for SGDClassifer:")
-    print("    {}".format(pipe_GS_SGD.best_score_))
-    print("Best Parameters for SGDClassifier:")
-    for p in sorted(GS_SGD_params.keys()):
-        print("    {}: {}".format(p, best_params[p]))
-
-    pipe_GS_SGD_predicted = pipe_GS_SGD.predict(X_test)
-    print(classification_report(Y_test, peipe_GS_SGD_predicted))
+    print(classification_report(Y_test, pipe_GS_LSVC_predicted))
 
 
 #### MAIN ######################################################################
@@ -238,8 +250,6 @@ if __name__ == "__main__":
         data, labels = readData(DATA_FILE)
         if args[1] == "nb":
             trainMNB(data, labels, args[2], 0.33)
-        elif args[1] == "linear":
-            trainLinear(data, labels, args[2], 0.33)
         elif args[1] == "lsvc":
             trainLSVC(data, labels, args[2], 0.33)
 
