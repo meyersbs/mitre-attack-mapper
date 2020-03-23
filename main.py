@@ -35,9 +35,9 @@ def readData(filename):
     """
     Read data from a CSV file. The CSV file should have the following 4 columns:
       1 ID          Unique ID for event
-      2 EVENT       Raw text of a Splunk event (log)
-      3 HOST        The hostname that the Splunk event ocurred on
-      4 HOST_TYPE   One of "Attacker" or "Victim"
+      2 HOST        The hostname that the Splunk event ocurred on
+      3 HOST_TYPE   One of "Attacker" or "Victim"
+      4 EVENT       Raw text of a Splunk event (log)
       5 TACTIC      One or more MITRE ATT&CK Tactics
       6 TECHNIQUE   One or more MITRE ATT&CK Techniques
 
@@ -61,8 +61,8 @@ def readData(filename):
 
         # Read data from CSV
         for row in csv_reader:
-            data.append(row[1])
-            hosts.append(row[3])
+            data.append(row[3])
+            hosts.append(row[2])
             labels["tactics"].append(row[4])
             labels["techniques"].append(row[5])
 
@@ -109,12 +109,13 @@ def preprocessData(data):
     return new_data
 
 
-def augmentData(data, labels, target_class):
+def augmentData(data, hosts, labels, target_class):
     """
-    Add the Tactic or Technique to the data.
+    Add the Tactic or Technique to the data. Add host type to the data.
     
     GIVEN:
       data (list)           list of events
+      hosts (list)          one of ["Attacker", "Victim"]
       labels (dict)         human-annotated labels for data
       target_class (str)    one of ["tactics", "techniques"]
 
@@ -125,10 +126,10 @@ def augmentData(data, labels, target_class):
 
     if target_class == "tactics":
         for i in range(0, len(data)):
-            new_data[i] = new_data[i] + " " + labels["techniques"][i]
+            new_data[i] = new_data[i] + " " + labels["techniques"][i] + " " + hosts[i]
     else:
         for i in range(0, len(data)):
-            new_data[i] = new_data[i] + " " + labels["tactics"][i]
+            new_data[i] = new_data[i] + " " + labels["tactics"][i] + " " + hosts[i]
 
     return new_data
 
@@ -273,7 +274,11 @@ if __name__ == "__main__":
     elif args[0] == "train":
         data, hosts, labels = readData(DATA_FILE)
         if args[1] == "nb":
+            if args[3] == "yes":
+                data = augmentData(data, hosts, labels, args[2])
             trainMNB(data, labels, args[2], 0.33)
         elif args[1] == "lsvc":
+            if args[3] == "yes":
+                data = augmentData(data, hosts, labels, args[2])
             trainLSVC(data, labels, args[2], 0.33)
 
