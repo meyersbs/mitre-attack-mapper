@@ -1,0 +1,37 @@
+Read 261 data points from '/home/bsm9339/mitre-attack-mapper/data/CPTC2018.csv'.
+Fitting 10 folds for each of 3024 candidates, totalling 30240 fits
+Best Score for MultinomialNB:
+    0.6728758169934641
+Best Parameters for MultinomialNB:
+    clf__alpha: 0.05
+    clf__fit_prior: True
+    tfidf__use_idf: True
+    vect__analyzer: word
+    vect__lowercase: True
+    vect__ngram_range: (1, 1)
+    vect__stop_words: english
+    vect__strip_accents: None
+                                                        precision    recall  f1-score   support
+
+                                            Collection       0.00      0.00      0.00         1
+                         Collection, Credential Access       0.50      0.50      0.50         2
+                                     Credential Access       0.00      0.00      0.00         1
+                     Credential Access, Initial Access       0.00      0.00      0.00         1
+                   Credential Access, Lateral Movement       0.29      0.29      0.29         7
+ Credential Access, Lateral Movement, Lateral Movement       0.75      0.75      0.75         8
+Credential Access, Lateral Movement, Lateral Movement,       0.00      0.00      0.00         2
+                                             Discovery       0.82      0.98      0.89        42
+                                  Discovery, Discovery       0.00      0.00      0.00         2
+                           Execution, Lateral Movement       1.00      1.00      1.00         1
+                                        Initial Access       0.00      0.00      0.00         2
+                                      Lateral Movement       0.75      0.38      0.50         8
+                    Lateral Movement, Lateral Movement       0.00      0.00      0.00         1
+                         Lateral Movement, Persistence       0.00      0.00      0.00         1
+                                            Pre-Attack       0.80      1.00      0.89         8
+                                  Privilege Escalation       0.00      0.00      0.00         0
+                     Privilege Escalation, Persistence       0.00      0.00      0.00         0
+
+                                              accuracy                           0.71        87
+                                             macro avg       0.29      0.29      0.28        87
+                                          weighted avg       0.65      0.71      0.67        87
+
