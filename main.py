@@ -36,18 +36,22 @@ def readData(filename):
     Read data from a CSV file. The CSV file should have the following 4 columns:
       1 ID          Unique ID for event
       2 EVENT       Raw text of a Splunk event (log)
-      3 TACTIC      One or more MITRE ATT&CK Tactics
-      4 TECHNIQUE   One or more MITRE ATT&CK Techniques
+      3 HOST        The hostname that the Splunk event ocurred on
+      4 HOST_TYPE   One of "Attacker" or "Victim"
+      5 TACTIC      One or more MITRE ATT&CK Tactics
+      6 TECHNIQUE   One or more MITRE ATT&CK Techniques
 
     GIVEN:
       filename (str)    file path to read data from
 
     RETURN:
       data (list)       list of events from CSV file
+      hosts (list)      list of host types for each event
       labels (dict)     dictionary with two keys, "tactics" and "techniques";
                         each value is a list of human-annotated labels
     """
     data = list()
+    hosts = list()
     labels = {"tactics": list(), "techniques": list()}
     with open(filename, newline="") as csvfile:
         csv_reader = csv.reader(csvfile, delimiter=",", quotechar="\"")
@@ -58,11 +62,12 @@ def readData(filename):
         # Read data from CSV
         for row in csv_reader:
             data.append(row[1])
-            labels["tactics"].append(row[2])
-            labels["techniques"].append(row[3])
+            hosts.append(row[3])
+            labels["tactics"].append(row[4])
+            labels["techniques"].append(row[5])
 
     print("Read {} data points from '{}'.".format(len(data), filename))
-    return data, labels
+    return data, hosts, labels
 
 
 def printStats(data, labels):
@@ -263,10 +268,10 @@ def trainLSVC(data, labels, target_class, test_size):
 if __name__ == "__main__":
     args = sys.argv[1:]
     if args[0] == "info":
-        data, labels = readData(DATA_FILE)
+        data, hosts, labels = readData(DATA_FILE)
         printStats(data, labels)
     elif args[0] == "train":
-        data, labels = readData(DATA_FILE)
+        data, hosts, labels = readData(DATA_FILE)
         if args[1] == "nb":
             trainMNB(data, labels, args[2], 0.33)
         elif args[1] == "lsvc":
