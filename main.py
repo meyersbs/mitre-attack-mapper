@@ -2,6 +2,7 @@
 
 #### PYTHON IMPORTS ############################################################
 import csv
+import json
 import numpy as NP
 import os
 import sys
@@ -11,6 +12,7 @@ from collections import Counter
 
 
 #### SCIKITLEARN IMPORTS #######################################################
+from sklearn.externals import joblib
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.linear_model import SGDClassifier
 from sklearn.metrics import classification_report
@@ -25,6 +27,7 @@ warnings.filterwarnings("ignore", category=UserWarning)
 CURR_PATH = os.path.dirname(os.path.realpath(__file__))
 DATA_PATH = os.path.join(CURR_PATH, "data")
 DATA_FILE = os.path.join(DATA_PATH, "CPTC2018.csv")
+MODELS_PATH = os.path.join(CURR_PATH, "models")
 
 
 #### HELPER FUNCTIONS ##########################################################
@@ -164,7 +167,6 @@ def trainMNB(data, labels, target_class, test_size):
     ])
     
     # All combinations of these parameters will be tested
-    # 3 * 2 * 3 * 3 * 2 * 2 * 8 * 2 = 3456 
     GS_MNB_params = {
         "vect__ngram_range": [(1, 1), (1, 2), (1, 3)], # Unigrams, Bigrams, Trigrams
         "vect__stop_words": (None, "english"),
@@ -172,12 +174,12 @@ def trainMNB(data, labels, target_class, test_size):
         "vect__analyzer": ("word", "char", "char_wb"),
         "vect__lowercase": (True, False),
         "tfidf__use_idf": (True, False),
-        "clf__alpha": (0.01, 0.05, 0.1, 0.5, 0.9, 0.95, 0.99, 1),
+        "clf__alpha": (0.01, 0.05, 0.1, 0.5, 0.9, 0.95, 0.99),
         "clf__fit_prior": (True, False)
     }
 
     # Test all combinations of GS_MNB_params using 10-fold CV and all available CPU's
-    pipe_GS_MNB = GridSearchCV(pipe_MNB, GS_MNB_params, cv=25, n_jobs=-1)
+    pipe_GS_MNB = GridSearchCV(pipe_MNB, GS_MNB_params, cv=10, n_jobs=-1, verbose=1)
     pipe_GS_MNB.fit(X_train, Y_train)
 
     best_params = pipe_GS_MNB.best_params_
@@ -191,6 +193,15 @@ def trainMNB(data, labels, target_class, test_size):
 
     pipe_GS_MNB_predicted = pipe_GS_MNB.predict(X_test)
     print(classification_report(Y_test, pipe_GS_MNB_predicted))
+
+    # Dump best model to disk
+    outfile = os.path.join(MODELS_PATH, "MultinomialNB_{}_best.pkl".format(target_class))
+    joblib.dump(pipe_GS_MNB.best_estimator_, outfile)
+    # Dump best model parameters to disk
+    params_outfile = os.path.join(MODELS_PATH, "MultinomialNB_{}_best_params.json".format(target_class))
+    f = open(params_outfile, "w")
+    f.write(json.dumps(best_params))
+    f.close()
 
 
 def trainLSVC(data, labels, target_class, test_size):
@@ -208,7 +219,6 @@ def trainLSVC(data, labels, target_class, test_size):
     ])
 
     # All combinations of these parameters will be tested
-    # 3 * 2 * 3 * 3 * 2 * 2 * 2 * 2 * 2 * 3 * 2 * 2 * 2 = 41472
     GS_LSVC_params = {
         "vect__ngram_range": [(1, 1), (1, 2), (1, 3)],
         "vect__stop_words": (None, "english"),
@@ -226,7 +236,7 @@ def trainLSVC(data, labels, target_class, test_size):
     }
 
     # Test all combinations of GS_LSV_params using 10-fold CV and all available CPU's
-    pipe_GS_LSVC = GridSearchCV(pipe_LSVC, GS_LSVC_params, cv=10, n_jobs=-1)
+    pipe_GS_LSVC = GridSearchCV(pipe_LSVC, GS_LSVC_params, cv=10, n_jobs=-1, verbose=1)
     pipe_GS_LSVC.fit(X_train, Y_train)
 
     best_params = pipe_GS_LSVC.best_params_
@@ -238,6 +248,15 @@ def trainLSVC(data, labels, target_class, test_size):
 
     pipe_GS_LSVC_predicted = pipe_GS_LSVC.predict(X_test)
     print(classification_report(Y_test, pipe_GS_LSVC_predicted))
+
+    # Dump best model to disk
+    outfile = os.path.join(MODELS_PATH, "LinearSVC_{}_best.pkl".format(target_class))
+    joblib.dump(pipe_GS_LSVC.best_estimator_, outfile)
+    # Dump best model parameters to disk
+    params_outfile = os.path.join(MODELS_PATH, "LinearSVC_{}_best_params.json".format(target_class))
+    f = open(params_outfile, "w")
+    f.write(json.dumps(best_params))
+    f.close()
 
 
 #### MAIN ######################################################################
