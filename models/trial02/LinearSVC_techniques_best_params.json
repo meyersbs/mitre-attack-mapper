@@ -1,0 +1,1 @@
+{"clf__dual": true, "clf__fit_intercept": false, "clf__loss": "hinge", "clf__max_iter": 5000, "clf__multi_class": "crammer_singer", "clf__penalty": "l2", "clf__tol": 0.1, "tfidf__use_idf": false, "vect__analyzer": "word", "vect__lowercase": false, "vect__ngram_range": [1, 3], "vect__stop_words": "english", "vect__strip_accents": "unicode"}
