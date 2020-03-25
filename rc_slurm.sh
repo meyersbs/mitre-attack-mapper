@@ -53,8 +53,32 @@ spack load py-scikit-learn@0.22 arch=linux-rhel7-x86_64
 spack load py-setuptools@41.4.0 arch=linux-rhel7-x86_64
 
 # Run the code
-time ./main.py info >> info.out
-time ./main.py train nb tactics >> nb_tactics.out
-time ./main.py train nb techniques >> nb_techniques.out
-time ./main.py train lsvc tactics >> lsvc_tactics.out
-time ./main.py train lsvc techniques >> lsvc_techniques.out
+
+# TRIAL 01
+#time ./main.py info ./data/CPTC2018.csv >> info.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=tactics >> nb_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=techniques >> nb.techniques.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=tactics >> lsvc_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=techniques >> lsvc_techniques.out
+
+# TRIAL 02
+#time ./main.py info ./data/CPTC2018.csv >> info.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=tactics --append_states=True --append_hosts=True >> nb_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=techniques --append_states=True --append_hosts=True >> nb_techniques.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=tactics --append_states=True --append_hosts=True >> lsvc_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=techniques --append_states=True --append_hosts=True >> lsvc_techniques.out
+
+# TRIAL 03
+#time ./main.py info ./data/CPTC2018.csv >> info.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=tactics --append_states=True --append_hosts=False >> nb_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=techniques --append_states=True --append_hosts=False >> nb_techniques.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=tactics --append_states=True --append_hosts=False >> lsvc_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=techniques --append_states=True --append_hosts=False >> lsvc_techniques.out
+
+# TRIAL 04
+time ./main.py info ./data/CPTC2018.csv >> info.out
+time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=tactics --append_states=False --append_hosts=True >> nb_tactics.out
+time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=techniques --append_states=False --append_hosts=True >> nb_techniques.out
+time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=tactics --append_states=False --append_hosts=True >> lsvc_tactics.out
+time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=techniques --append_states=False --append_hosts=True >> lsvc_techniques.out
+
