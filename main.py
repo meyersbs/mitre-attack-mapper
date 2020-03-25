@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 #### PYTHON IMPORTS ############################################################
+import argparse
 import csv
 import json
 import numpy as NP
@@ -26,8 +27,8 @@ warnings.filterwarnings("ignore", category=UserWarning)
 #### GLOBALS ###################################################################
 CURR_PATH = os.path.dirname(os.path.realpath(__file__))
 DATA_PATH = os.path.join(CURR_PATH, "data")
-DATA_FILE = os.path.join(DATA_PATH, "CPTC2018.csv")
 MODELS_PATH = os.path.join(CURR_PATH, "models")
+RESULTS_PATH = os.path.join(CURR_PATH, "results")
 
 
 #### HELPER FUNCTIONS ##########################################################
@@ -109,7 +110,7 @@ def preprocessData(data):
     return new_data
 
 
-def augmentData(data, hosts, labels, target_class):
+def augmentData(data, hosts, labels, target_class, append_states, append_hosts):
     """
     Add the Tactic or Technique to the data. Add host type to the data.
     
@@ -118,18 +119,22 @@ def augmentData(data, hosts, labels, target_class):
       hosts (list)          one of ["Attacker", "Victim"]
       labels (dict)         human-annotated labels for data
       target_class (str)    one of ["tactics", "techniques"]
+      append_states (bool)  whether or not to append tactics/techniques to the data
+      append_hosts (bool)   whether or not to append hosts types to the data
 
     RETURN:
-      new_data (list)       copy of `data` with tactics/techniques appended
+      new_data (list)       copy of `data` with tactics/techniques and/or host types appended
     """
     new_data = data
+    target_swap = {"tactics": "techniques", "techniques": "tactics"}
 
-    if target_class == "tactics":
+    if append_hosts:
         for i in range(0, len(data)):
-            new_data[i] = new_data[i] + " " + labels["techniques"][i] + " " + hosts[i]
-    else:
+            new_data[i] = new_data[i] + " " + hosts[i]
+
+    if append_states:
         for i in range(0, len(data)):
-            new_data[i] = new_data[i] + " " + labels["tactics"][i] + " " + hosts[i]
+            new_data[i] = new_data[i] + " " + labels[target_swap[target_class]][i]
 
     return new_data
 
@@ -158,7 +163,8 @@ def trainTestSplit(data, labels, target_class, test_size):
     return X_train, X_test, Y_train, Y_test
 
 
-def trainMNB(data, labels, target_class, test_size):
+#### TEST FUNCTIONS ############################################################
+def testMNB(data, labels, target_class, test_size):
     """
     Train and test the performance of MultinomialNB with various parameter
     combinations.
@@ -210,7 +216,7 @@ def trainMNB(data, labels, target_class, test_size):
     f.close()
 
 
-def trainLSVC(data, labels, target_class, test_size):
+def testLSVC(data, labels, target_class, test_size):
     """
     Train and test the performance of LinearSVC with various parameter
     combinations.
@@ -267,18 +273,57 @@ def trainLSVC(data, labels, target_class, test_size):
 
 #### MAIN ######################################################################
 if __name__ == "__main__":
-    args = sys.argv[1:]
-    if args[0] == "info":
-        data, hosts, labels = readData(DATA_FILE)
+    parser = argparse.ArgumentParser(
+        description="Map Splunk logs to MITRE ATT&CK states with Scikit-Learn."
+    )
+    parser.add_argument(
+        "--append_states", type=bool, choices=[True, False], default=False,
+        help="Whether or not to append tactics/techniques to the raw data "
+        "before testing/training. Default: False."
+    )
+    parser.add_argument(
+        "--append_hosts", type=bool, choices=[True, False], default=False,
+        help="Whether or not to append host types to the raw data before "
+        "testing/training. Default: False."
+    )
+    parser.add_argument(
+        "--model_type", choices=["nb", "lsvc"],
+        help="The type of model to use. Either Multinomial Naive Bayes (nb) " 
+        "or Linear Support Vector Classifier (lsvc)."
+    )
+    parser.add_argument(
+        "--target", choices=["tactics", "techniques"],
+        help="The target class for testing, training, and classification."
+    )
+    parser.add_argument(
+        "command", choices=["info", "test", "train", "classify"],
+        help="The command to run. Info prints stats for the specified dataset."
+        " Test does 10-fold CV to find the best feature combinations. Train "
+        "builds a new model using all data and the best feature set. Classify "
+        "uses the best model to classify a new dataset."
+    )
+    parser.add_argument(
+        "dataset", type=str, help="Relative path to the dataset (CSV) to use."
+    )
+    args = parser.parse_args()
+
+    if args.command == "info":
+        data, hosts, labels = readData(args.dataset)
         printStats(data, labels)
-    elif args[0] == "train":
-        data, hosts, labels = readData(DATA_FILE)
-        if args[1] == "nb":
-            if args[3] == "yes":
-                data = augmentData(data, hosts, labels, args[2])
-            trainMNB(data, labels, args[2], 0.33)
-        elif args[1] == "lsvc":
-            if args[3] == "yes":
-                data = augmentData(data, hosts, labels, args[2])
-            trainLSVC(data, labels, args[2], 0.33)
+    elif args.command == "test":
+        if args.model_type is None or args.target is None:
+            sys.exit("Arguments '--model_type' and '--target' required for "
+                     "'command=test'.")
+        
+        data, hosts, labels = readData(args.dataset)
+        data = augmentData(data, hosts, labels, args.target, args.append_states, args.append_hosts)
+        
+        if args.model_type == "nb":
+            testMNB(data, labels, args.target, 0.33)
+        elif args.model_type == "lsvc":
+            testLSVC(data, labels, args.target, 0.33)
+    elif args.command == "train":
+        sys.exit("Command 'train' is not yet implemented.")
+    elif args.command == "classify":
+        sys.exit("Command 'classify' is not yet implemented.")
 
