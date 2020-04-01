@@ -1,0 +1,43 @@
+Read 261 data points from './data/CPTC2018.csv'.
+Fitting 10 folds for each of 6048 candidates, totalling 60480 fits
+Best Score for MultinomialNB:
+    0.6611111111111111
+Best Parameters for MultinomialNB:
+    clf__alpha: 0.01
+    clf__fit_prior: True
+    tfidf__use_idf: True
+    vect__analyzer: word
+    vect__lowercase: True
+    vect__ngram_range: (2, 2)
+    vect__stop_words: english
+    vect__strip_accents: None
+                                                                    precision    recall  f1-score   support
+
+                          Automated Collection, Credential Dumping       0.50      1.00      0.67         1
+                                                       Brute Force       0.00      0.00      0.00         1
+                                      Brute Force, Remote Services       0.36      0.67      0.47         6
+                                       Brute Force, Valid Accounts       0.00      0.00      0.00         2
+                      Brute Force, Valid Accounts, Remote Services       0.89      0.67      0.76        12
+           Command Line Interface, Valid Accounts, Remote Services       0.00      0.00      0.00         1
+                                                    Create Account       0.00      0.00      0.00         1
+                                               Drive-by Compromise       1.00      1.00      1.00         1
+Execution for client exploitation, Exploitation of Remote Services       1.00      1.00      1.00         1
+                             Exploitation for Privilege Escalation       0.00      0.00      0.00         0
+       Exploitation for Privilege Escalation, Account Manipulation       1.00      1.00      1.00         2
+                                  File System Permissions Weakness       0.00      0.00      0.00         1
+                                          Network Service Scanning       0.74      0.81      0.77        31
+             Network Service Scanning, Security Software Discovery       0.17      0.33      0.22         3
+                                           Network Share Discovery       0.00      0.00      0.00         0
+                                                        Pre-Attack       0.90      0.82      0.86        11
+                                                 Process Discovery       1.00      1.00      1.00         1
+                                           Remote Desktop Protocol       0.00      0.00      0.00         2
+                                                  Remote File Copy       0.00      0.00      0.00         0
+                                                   Remote Services       1.00      0.33      0.50         3
+                                          System Service Discovery       0.00      0.00      0.00         1
+                                                    Valid Accounts       0.00      0.00      0.00         1
+                                   Valid Accounts, Remote Services       0.40      0.40      0.40         5
+
+                                                          accuracy                           0.64        87
+                                                         macro avg       0.39      0.39      0.38        87
+                                                      weighted avg       0.65      0.64      0.63        87
+

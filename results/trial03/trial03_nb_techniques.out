@@ -1,0 +1,40 @@
+Read 261 data points from './data/CPTC2018.csv'.
+Fitting 10 folds for each of 6048 candidates, totalling 60480 fits
+Best Score for MultinomialNB:
+    0.7316993464052287
+Best Parameters for MultinomialNB:
+    clf__alpha: 0.05
+    clf__fit_prior: True
+    tfidf__use_idf: True
+    vect__analyzer: word
+    vect__lowercase: False
+    vect__ngram_range: (3, 3)
+    vect__stop_words: english
+    vect__strip_accents: None
+                                                             precision    recall  f1-score   support
+
+                   Automated Collection, Credential Dumping       1.00      1.00      1.00         1
+                                                Brute Force       0.00      0.00      0.00         1
+                               Brute Force, Remote Services       0.69      1.00      0.82         9
+                                Brute Force, Valid Accounts       0.00      0.00      0.00         1
+               Brute Force, Valid Accounts, Remote Services       0.92      0.92      0.92        12
+                                             Create Account       0.00      0.00      0.00         1
+                 Data From Local System, Credential Dumping       0.00      0.00      0.00         1
+                      Exploitation for Privilege Escalation       0.00      0.00      0.00         1
+Exploitation for Privilege Escalation, Account Manipulation       1.00      1.00      1.00         1
+                            Exploitation of Remote Services       0.00      0.00      0.00         1
+                                   Network Service Scanning       0.76      0.93      0.84        30
+      Network Service Scanning, Security Software Discovery       0.67      0.67      0.67         3
+                                                 Pre-Attack       0.55      0.86      0.67         7
+                                          Process Discovery       0.00      0.00      0.00         2
+                                    Remote Desktop Protocol       0.00      0.00      0.00         4
+                                            Remote Services       1.00      1.00      1.00         1
+                            Remote Services, Create Account       0.00      0.00      0.00         2
+                            Remote Services, Valid Accounts       0.00      0.00      0.00         1
+                                             Valid Accounts       0.00      0.00      0.00         1
+                            Valid Accounts, Remote Services       0.57      0.57      0.57         7
+
+                                                   accuracy                           0.72        87
+                                                  macro avg       0.36      0.40      0.37        87
+                                               weighted avg       0.61      0.72      0.66        87
+

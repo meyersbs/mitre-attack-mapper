@@ -1,0 +1,40 @@
+Read 261 data points from './data/CPTC2018.csv'.
+Fitting 10 folds for each of 82944 candidates, totalling 829440 fits
+Best Score for LinearSVC:
+    0.7980392156862746
+Best Parameters for LinearSVC:
+    clf__dual: True
+    clf__fit_intercept: True
+    clf__loss: hinge
+    clf__max_iter: 1000
+    clf__multi_class: crammer_singer
+    clf__penalty: l1
+    clf__tol: 0.1
+    tfidf__use_idf: True
+    vect__analyzer: word
+    vect__lowercase: True
+    vect__ngram_range: (2, 2)
+    vect__stop_words: None
+    vect__strip_accents: unicode
+                                                       precision    recall  f1-score   support
+
+                    Credential Access, Initial Access       0.00      0.00      0.00         1
+                  Credential Access, Lateral Movement       0.62      0.83      0.71         6
+Credential Access, Lateral Movement, Lateral Movement       0.92      1.00      0.96        11
+                                            Discovery       0.92      0.90      0.91        40
+                         Discovery, Credential Access       0.00      0.00      0.00         1
+                                 Discovery, Discovery       0.00      0.00      0.00         1
+                                            Execution       0.00      0.00      0.00         1
+                          Execution, Lateral Movement       1.00      1.00      1.00         2
+                                     Lateral Movement       0.64      0.70      0.67        10
+                   Lateral Movement, Lateral Movement       0.50      0.33      0.40         3
+                        Lateral Movement, Persistence       0.00      0.00      0.00         1
+                                          Persistence       0.00      0.00      0.00         1
+                                           Pre-Attack       0.88      1.00      0.93         7
+                                 Privilege Escalation       0.00      0.00      0.00         1
+                    Privilege Escalation, Persistence       1.00      1.00      1.00         1
+
+                                             accuracy                           0.80        87
+                                            macro avg       0.43      0.45      0.44        87
+                                         weighted avg       0.78      0.80      0.79        87
+

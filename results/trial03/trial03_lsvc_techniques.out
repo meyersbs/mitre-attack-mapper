@@ -1,0 +1,45 @@
+Read 261 data points from './data/CPTC2018.csv'.
+Fitting 10 folds for each of 82944 candidates, totalling 829440 fits
+Best Score for LinearSVC:
+    0.765359477124183
+Best Parameters for LinearSVC:
+    clf__dual: False
+    clf__fit_intercept: True
+    clf__loss: squared_hinge
+    clf__max_iter: 1000
+    clf__multi_class: ovr
+    clf__penalty: l1
+    clf__tol: 0.1
+    tfidf__use_idf: True
+    vect__analyzer: word
+    vect__lowercase: True
+    vect__ngram_range: (2, 2)
+    vect__stop_words: None
+    vect__strip_accents: None
+                                                                    precision    recall  f1-score   support
+
+                          Automated Collection, Credential Dumping       0.00      0.00      0.00         2
+                                                       Brute Force       0.00      0.00      0.00         1
+                                      Brute Force, Remote Services       1.00      1.00      1.00        10
+                      Brute Force, Valid Accounts, Remote Services       1.00      1.00      1.00         8
+                                     Collection, Credential Access       0.00      0.00      0.00         1
+           Command Line Interface, Valid Accounts, Remote Services       0.00      0.00      0.00         1
+                                Data from Information Repositories       0.00      0.00      0.00         1
+Execution for client exploitation, Exploitation of Remote Services       0.00      0.00      0.00         0
+       Exploitation for Privilege Escalation, Account Manipulation       0.00      0.00      0.00         2
+                                   Exploitation of Remote Services       0.00      0.00      0.00         1
+                                  File System Permissions Weakness       0.00      0.00      0.00         1
+                                          Network Service Scanning       0.76      1.00      0.86        38
+                    Network Service Scanning, Credentials in Files       0.00      0.00      0.00         1
+             Network Service Scanning, Security Software Discovery       1.00      0.67      0.80         3
+                                                        Pre-Attack       0.80      1.00      0.89         8
+                                                 Process Discovery       0.00      0.00      0.00         1
+                                           Remote Desktop Protocol       0.00      0.00      0.00         2
+                                                   Remote Services       1.00      1.00      1.00         1
+                                                    Valid Accounts       0.00      0.00      0.00         2
+                                   Valid Accounts, Remote Services       0.60      1.00      0.75         3
+
+                                                          accuracy                           0.80        87
+                                                         macro avg       0.31      0.33      0.32        87
+                                                      weighted avg       0.68      0.80      0.73        87
+

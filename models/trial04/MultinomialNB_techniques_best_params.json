@@ -1,1 +1,1 @@
-{"clf__alpha": 0.01, "clf__fit_prior": true, "tfidf__use_idf": true, "vect__analyzer": "word", "vect__lowercase": true, "vect__ngram_range": [1, 1], "vect__stop_words": "english", "vect__strip_accents": null}
+{"clf__alpha": 0.05, "clf__fit_prior": true, "tfidf__use_idf": true, "vect__analyzer": "word", "vect__lowercase": true, "vect__ngram_range": [2, 3], "vect__stop_words": null, "vect__strip_accents": null}

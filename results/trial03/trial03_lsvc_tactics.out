@@ -1,0 +1,38 @@
+Read 261 data points from './data/CPTC2018.csv'.
+Fitting 10 folds for each of 82944 candidates, totalling 829440 fits
+Best Score for LinearSVC:
+    0.8284313725490196
+Best Parameters for LinearSVC:
+    clf__dual: False
+    clf__fit_intercept: True
+    clf__loss: squared_hinge
+    clf__max_iter: 5000
+    clf__multi_class: ovr
+    clf__penalty: l1
+    clf__tol: 0.1
+    tfidf__use_idf: False
+    vect__analyzer: word
+    vect__lowercase: False
+    vect__ngram_range: (1, 1)
+    vect__stop_words: english
+    vect__strip_accents: ascii
+                                                       precision    recall  f1-score   support
+
+         Brute Force, Valid Accounts, Remote Services       0.00      0.00      0.00         1
+                        Collection, Credential Access       0.50      1.00      0.67         1
+                                    Credential Access       0.00      0.00      0.00         2
+                    Credential Access, Initial Access       0.00      0.00      0.00         2
+                  Credential Access, Lateral Movement       0.91      0.91      0.91        11
+Credential Access, Lateral Movement, Lateral Movement       0.82      0.90      0.86        10
+                                            Discovery       0.95      0.95      0.95        41
+                                 Discovery, Discovery       0.00      0.00      0.00         1
+                          Execution, Lateral Movement       1.00      1.00      1.00         1
+                                     Lateral Movement       0.50      1.00      0.67         5
+                   Lateral Movement, Lateral Movement       0.00      0.00      0.00         2
+                        Lateral Movement, Persistence       0.00      0.00      0.00         1
+                                           Pre-Attack       0.82      1.00      0.90         9
+
+                                             accuracy                           0.85        87
+                                            macro avg       0.42      0.52      0.46        87
+                                         weighted avg       0.79      0.85      0.81        87
+
