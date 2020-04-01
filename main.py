@@ -180,7 +180,7 @@ def testMNB(data, labels, target_class, test_size):
     
     # All combinations of these parameters will be tested
     GS_MNB_params = {
-        "vect__ngram_range": [(1, 1), (1, 2), (1, 3)], # Unigrams, Bigrams, Trigrams
+        "vect__ngram_range": [(1, 1), (1, 2), (1, 3), (2, 2), (2, 3), (3, 3)],
         "vect__stop_words": (None, "english"),
         "vect__strip_accents": (None, "ascii", "unicode"),
         "vect__analyzer": ("word", "char", "char_wb"),
@@ -232,7 +232,7 @@ def testLSVC(data, labels, target_class, test_size):
 
     # All combinations of these parameters will be tested
     GS_LSVC_params = {
-        "vect__ngram_range": [(1, 1), (1, 2), (1, 3)],
+        "vect__ngram_range": [(1, 1), (1, 2), (1, 3), (2, 2), (2, 3), (3, 3)],
         "vect__stop_words": (None, "english"),
         "vect__strip_accents": (None, "ascii", "unicode"),
         "vect__analyzer": ("word", "char", "char_wb"),
