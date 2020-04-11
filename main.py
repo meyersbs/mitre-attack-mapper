@@ -139,6 +139,43 @@ def augmentData(data, hosts, labels, target_class, append_states, append_hosts):
     return new_data
 
 
+def removeSingles(data, hosts, labels, target_class):
+    """
+    Remove entries from the dataset where the tactic/technique only occurs once.
+
+    GIVEN:
+      data (list)           list of events
+      hosts (list)          one of ["Attacker", "Victim"]
+      labels (dict)         human-annotated labels for data
+      target_class (str)    one of ["tactics", "techniques"]
+
+    RETURN:
+      new_data (list)       copy of data with single occurrences removed
+      new_hosts (list)      copy of hosts with single occurrences removed
+      new_labels (dict)     copy of labels with single occurrences removed
+    """
+    new_data = list()
+    new_hosts = list()
+    new_labels = {"tactics": list(), "techniques": list()}
+    
+    counts = dict(Counter(labels[target_class]))
+    singles = list()
+    for k, v in counts.items():
+        if v == 1:
+            singles.append(k)
+
+    for i in range(0, len(data)):
+        if labels[target_class][i] not in singles:
+            new_data.append(data[i])
+            new_hosts.append(hosts[i])
+            new_labels["tactics"].append(labels["tactics"][i])
+            new_labels["techniques"].append(labels["techniques"][i])
+        else:
+            pass
+
+    return new_data, new_hosts, new_labels
+
+
 def trainTestSplit(data, labels, target_class, test_size):
     """
     Split the data and it's labels into training and testing sets.
@@ -164,7 +201,7 @@ def trainTestSplit(data, labels, target_class, test_size):
 
 
 #### TEST FUNCTIONS ############################################################
-def testMNB(data, labels, target_class, test_size):
+def testMNB(data, labels, target_class, test_size, trial_prefix):
     """
     Train and test the performance of MultinomialNB with various parameter
     combinations.
@@ -201,22 +238,20 @@ def testMNB(data, labels, target_class, test_size):
     for p in sorted(GS_MNB_params.keys()):
         print("    {}: {}".format(p, best_params[p]))
 
-    #print(pipe_GS_MNB.cv_results_)
-
     pipe_GS_MNB_predicted = pipe_GS_MNB.predict(X_test)
     print(classification_report(Y_test, pipe_GS_MNB_predicted))
 
     # Dump best model to disk
-    outfile = os.path.join(MODELS_PATH, "MultinomialNB_{}_best.pkl".format(target_class))
+    outfile = os.path.join(MODELS_PATH, "{}_MultinomialNB_{}_best.pkl".format(trial_prefix, target_class))
     joblib.dump(pipe_GS_MNB.best_estimator_, outfile)
     # Dump best model parameters to disk
-    params_outfile = os.path.join(MODELS_PATH, "MultinomialNB_{}_best_params.json".format(target_class))
+    params_outfile = os.path.join(MODELS_PATH, "{}_MultinomialNB_{}_best_params.json".format(trial_prefix, target_class))
     f = open(params_outfile, "w")
     f.write(json.dumps(best_params))
     f.close()
 
 
-def testLSVC(data, labels, target_class, test_size):
+def testLSVC(data, labels, target_class, test_size, trial_prefix):
     """
     Train and test the performance of LinearSVC with various parameter
     combinations.
@@ -262,10 +297,10 @@ def testLSVC(data, labels, target_class, test_size):
     print(classification_report(Y_test, pipe_GS_LSVC_predicted))
 
     # Dump best model to disk
-    outfile = os.path.join(MODELS_PATH, "LinearSVC_{}_best.pkl".format(target_class))
+    outfile = os.path.join(MODELS_PATH, "{}_LinearSVC_{}_best.pkl".format(trial_prefix, target_class))
     joblib.dump(pipe_GS_LSVC.best_estimator_, outfile)
     # Dump best model parameters to disk
-    params_outfile = os.path.join(MODELS_PATH, "LinearSVC_{}_best_params.json".format(target_class))
+    params_outfile = os.path.join(MODELS_PATH, "{}_LinearSVC_{}_best_params.json".format(trial_prefix, target_class))
     f = open(params_outfile, "w")
     f.write(json.dumps(best_params))
     f.close()
@@ -296,6 +331,15 @@ if __name__ == "__main__":
         help="The target class for testing, training, and classification."
     )
     parser.add_argument(
+        "--trial_prefix", type=str, default="",
+        help="String to prefix to model files saved to disk."
+    )
+    parser.add_argument(
+        "--ignore_singles", type=bool, choices=[True, False], default=False,
+        help="Whether or not to remove tactics/techniques that only occur once "
+        "from the dataset."
+    )
+    parser.add_argument(
         "command", choices=["info", "test", "train", "classify"],
         help="The command to run. Info prints stats for the specified dataset."
         " Test does 10-fold CV to find the best feature combinations. Train "
@@ -306,9 +350,15 @@ if __name__ == "__main__":
         "dataset", type=str, help="Relative path to the dataset (CSV) to use."
     )
     args = parser.parse_args()
+    print(args)
 
     if args.command == "info":
+        if args.target is None:
+            sys.exit("Argument '--target' required for 'command=info'.")
+
         data, hosts, labels = readData(args.dataset)
+        if args.ignore_singles == True:
+            data, hosts, labels = removeSingles(data, hosts, labels, args.target)
         printStats(data, labels)
     elif args.command == "test":
         if args.model_type is None or args.target is None:
@@ -316,12 +366,14 @@ if __name__ == "__main__":
                      "'command=test'.")
         
         data, hosts, labels = readData(args.dataset)
+        if args.ignore_singles == True:
+            data, hosts, labels = removeSingles(data, hosts, labels, args.target)
         data = augmentData(data, hosts, labels, args.target, args.append_states, args.append_hosts)
         
         if args.model_type == "nb":
-            testMNB(data, labels, args.target, 0.33)
+            testMNB(data, labels, args.target, 0.33, args.trial_prefix)
         elif args.model_type == "lsvc":
-            testLSVC(data, labels, args.target, 0.33)
+            testLSVC(data, labels, args.target, 0.33, args.trial_prefix)
     elif args.command == "train":
         sys.exit("Command 'train' is not yet implemented.")
     elif args.command == "classify":

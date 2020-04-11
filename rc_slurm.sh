@@ -55,30 +55,58 @@ spack load py-setuptools@41.4.0 arch=linux-rhel7-x86_64
 # Run the code
 
 # TRIAL 01
-#time ./main.py info ./data/CPTC2018.csv >> info.out
-#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=tactics >> trial01_nb_tactics.out
-#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=techniques >> trial01_nb_techniques.out
-#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=tactics >> trial01_lsvc_tactics.out
-#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=techniques >> trial01_lsvc_techniques.out
+#time ./main.py info ./data/CPTC2018.csv --target=tactics --ignore_singles=False >> trial01_info.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=tactics --trial_prefix=trial01 --ignore_singles=False >> trial01_nb_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=techniques --trial_prefix=trial01 --ignore_singles=False >> trial01_nb_techniques.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=tactics --trial_prefix=trial01 --ignore_singles=False >> trial01_lsvc_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=techniques --trial_prefix=trial01 --ignore_singles=False >> trial01_lsvc_techniques.out
 
 # TRIAL 02
-#time ./main.py info ./data/CPTC2018.csv >> info.out
-#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=tactics --append_states=True --append_hosts=True >> trial02_nb_tactics.out
-#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=techniques --append_states=True --append_hosts=True >> trial02_nb_techniques.out
-#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=tactics --append_states=True --append_hosts=True >> trial02_lsvc_tactics.out
-#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=techniques --append_states=True --append_hosts=True >> trial02_lsvc_techniques.out
+#time ./main.py info ./data/CPTC2018.csv --target=tactics >> trial02_info.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=tactics --append_states=True --append_hosts=True --trial_prefix=trial02 --ignore_singles=False >> trial02_nb_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=techniques --append_states=True --append_hosts=True --trial_prefix=trial02 --ignore_singles=False >> trial02_nb_techniques.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=tactics --append_states=True --append_hosts=True --trial_prefix=trial02 --ignore_singles=False >> trial02_lsvc_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=techniques --append_states=True --append_hosts=True --trial_prefix=trial02 --ignore_singles=False >> trial02_lsvc_techniques.out
 
 # TRIAL 03
-#time ./main.py info ./data/CPTC2018.csv >> info.out
-#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=tactics --append_states=True --append_hosts=False >> trial03_nb_tactics.out
-#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=techniques --append_states=True --append_hosts=False >> trial03_nb_techniques.out
-#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=tactics --append_states=True --append_hosts=False >> trial03_lsvc_tactics.out
-#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=techniques --append_states=True --append_hosts=False >> trial03_lsvc_techniques.out
+#time ./main.py info ./data/CPTC2018.csv --target=tactics --ignore_singles=False >> trial03_info.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=tactics --append_states=True --append_hosts=False --trial_prefix=trial03 --ignore_singles=False >> trial03_nb_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=techniques --append_states=True --append_hosts=False --trial_prefix=trial03 --ignore_singles=False >> trial03_nb_techniques.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=tactics --append_states=True --append_hosts=False --trial_prefix=trial03 --ignore_singles=False >> trial03_lsvc_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=techniques --append_states=True --append_hosts=False --trial_prefix=trial03 --ignore_singles=False >> trial03_lsvc_techniques.out
 
 # TRIAL 04
-time ./main.py info ./data/CPTC2018.csv >> info.out
-time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=tactics --append_states=False --append_hosts=True >> trial04_nb_tactics.out
-time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=techniques --append_states=False --append_hosts=True >> trial04_nb_techniques.out
-time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=tactics --append_states=False --append_hosts=True >> trial04_lsvc_tactics.out
-time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=techniques --append_states=False --append_hosts=True >> trial04_lsvc_techniques.out
+#time ./main.py info ./data/CPTC2018.csv --target=tactics --ignore_singles=False >> trial04_info.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=tactics --append_states=False --append_hosts=True --trial_prefix=trial04 --ignore_singles=False >> trial04_nb_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=techniques --append_states=False --append_hosts=True --trial_prefix=trial04 --ignore_singles=False >> trial04_nb_techniques.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=tactics --append_states=False --append_hosts=True --trial_prefix=trial04 --ignore_singles=False >> trial04_lsvc_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=techniques --append_states=False --append_hosts=True --trial_prefix=trial04 --ignore_singles=False >> trial04_lsvc_techniques.out
+
+# TRIAL 05
+#time ./main.py info ./data/CPTC2018.csv --target=tactics --ignore_singles=True >> trial05_info.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=tactics --trial_prefix=trial05 --ignore_singles=True >> trial05_nb_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=techniques --trial_prefix=trial05 --ignore_singles=True >> trial05_nb_techniques.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=tactics --trial_prefix=trial05 --ignore_singles=True >> trial05_lsvc_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=techniques --trial_prefix=trial05 --ignore_singles=True >> trial05_lsvc_techniques.out
+
+# TRIAL 06
+#time ./main.py info ./data/CPTC2018.csv --target=tactics --ignore_singles=True >> trial06_info.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=tactics --append_states=True --append_hosts=True --trial_prefix=trial06 --ignore_singles=True >> trial06_nb_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=techniques --append_states=True --append_hosts=True --trial_prefix=trial06 --ignore_singles=True >> trial06_nb_techniques.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=tactics --append_states=True --append_hosts=True --trial_prefix=trial06 --ignore_singles=True >> trial06_lsvc_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=techniques --append_states=True --append_hosts=True --trial_prefix=trial06 --ignore_singles=True >> trial06_lsvc_techniques.out
+
+# TRIAL 07
+#time ./main.py info ./data/CPTC2018.csv --target=tactics >> trial07_info.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=tactics --append_states=True --append_hosts=False --trial_prefix=trial07 --ignore_singles=True >> trial07_nb_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=techniques --append_states=True --append_hosts=False --trial_prefix=trial07 --ignore_singles=True >> trial07_nb_techniques.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=tactics --append_states=True --append_hosts=False --trial_prefix=trial07 --ignore_singles=True >> trial07_lsvc_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=techniques --append_states=True --append_hosts=False --trial_prefix=trial07 --ignore_singles=True >> trial07_lsvc_techniques.out
+
+# TRIAL 08
+time ./main.py info ./data/CPTC2018.csv --target=tactics >> trial08_info.out
+time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=tactics --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_nb_tactics.out
+time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=techniques --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_nb_techniques.out
+time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=tactics --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_lsvc_tactics.out
+time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=techniques --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_lsvc_techniques.out
 
