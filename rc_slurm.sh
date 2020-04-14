@@ -13,13 +13,13 @@
 
 # Job name.
 # Format: -J <job_name>
-#SBATCH -J mitre_attack4
+#SBATCH -J mitre_attack8
 
 # Files to save STDOUT and STDERR to.
 # Format: -o <stdout_filename>.output
 # Format: -e <stderr_filename>.outout
-#SBATCH -o mitre_attack4.output
-#SBATCH -e mitre_attack4.output
+#SBATCH -o mitre_attack8.output
+#SBATCH -e mitre_attack8.output
 
 # Email to send notifications to.
 # Format: --mail-user <email@domain.com>

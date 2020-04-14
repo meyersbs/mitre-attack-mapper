@@ -1,0 +1,35 @@
+Namespace(append_hosts=True, append_states=True, command='test', dataset='./data/CPTC2018.csv', ignore_singles=True, model_type='nb', target='tactics', trial_prefix='trial08')
+Read 261 data points from './data/CPTC2018.csv'.
+Fitting 10 folds for each of 6048 candidates, totalling 60480 fits
+Best Score for MultinomialNB:
+    0.7486928104575163
+Best Parameters for MultinomialNB:
+    clf__alpha: 0.01
+    clf__fit_prior: True
+    tfidf__use_idf: True
+    vect__analyzer: word
+    vect__lowercase: True
+    vect__ngram_range: (1, 1)
+    vect__stop_words: english
+    vect__strip_accents: None
+                                                       precision    recall  f1-score   support
+
+                        Collection, Credential Access       0.50      1.00      0.67         1
+                                    Credential Access       0.00      0.00      0.00         1
+                    Credential Access, Initial Access       0.00      0.00      0.00         1
+                  Credential Access, Lateral Movement       0.67      0.44      0.53         9
+Credential Access, Lateral Movement, Lateral Movement       0.43      1.00      0.60         6
+                                            Discovery       0.98      0.87      0.92        47
+                                 Discovery, Discovery       0.00      0.00      0.00         1
+                          Execution, Lateral Movement       0.33      1.00      0.50         1
+                                       Initial Access       1.00      1.00      1.00         1
+                                     Lateral Movement       0.33      0.17      0.22         6
+                   Lateral Movement, Lateral Movement       0.33      1.00      0.50         1
+                                          Persistence       0.00      0.00      0.00         2
+                                           Pre-Attack       0.89      1.00      0.94         8
+                                 Privilege Escalation       0.00      0.00      0.00         0
+
+                                             accuracy                           0.75        85
+                                            macro avg       0.39      0.53      0.42        85
+                                         weighted avg       0.77      0.75      0.74        85
+

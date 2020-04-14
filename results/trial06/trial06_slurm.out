@@ -1,0 +1,1292 @@
+==> Error: the constraint '['python']' matches multiple packages:
+	rfzhypa python@2.7.16%gcc@7.4.0+bz2+ctypes+dbm+lzma~nis~optimizations+pic+pyexpat+pythoncmd+readline+shared+sqlite3+ssl~tix+tkinter~ucs4~uuid+zlib arch=linux-rhel7-skylake_avx512
+		^sqlite@3.30.1%gcc@7.4.0+column_metadata+fts+fts3+fts5+functions+rtree arch=linux-rhel7-skylake_avx512/3en4s7q
+		^libx11@1.6.7%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/orhy5g6
+		^tar@1.32%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/uieukca
+		^libxml2@2.9.9%gcc@7.4.0~python arch=linux-rhel7-skylake_avx512/fajjc45
+		^expat@2.2.9%gcc@7.4.0+libbsd arch=linux-rhel7-skylake_avx512/tsn3xuc
+		^font-util@1.3.2%gcc@7.4.0 fonts=encodings,font-adobe-100dpi,font-adobe-75dpi,font-adobe-utopia-100dpi,font-adobe-utopia-75dpi,font-adobe-utopia-type1,font-alias,font-arabic-misc,font-bh-100dpi,font-bh-75dpi,font-bh-lucidatypewriter-100dpi,font-bh-lucidatypewriter-75dpi,font-bh-ttf,font-bh-type1,font-bitstream-100dpi,font-bitstream-75dpi,font-bitstream-speedo,font-bitstream-type1,font-cronyx-cyrillic,font-cursor-misc,font-daewoo-misc,font-dec-misc,font-ibm-type1,font-isas-misc,font-jis-misc,font-micro-misc,font-misc-cyrillic,font-misc-ethiopic,font-misc-meltho,font-misc-misc,font-mutt-misc,font-schumacher-misc,font-screen-cyrillic,font-sun-misc,font-winitzki-cyrillic,font-xfree86-type1 arch=linux-rhel7-skylake_avx512/wu6rsq3
+		^xz@5.2.4%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/cguxahu
+		^tcl@8.6.8%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/vwnt5q4
+		^libxcb@1.13%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/6jwjgwn
+		^gdbm@1.18.1%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/6qpgo63
+		^libpthread-stubs@0.4%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/252xv3s
+		^libbsd@0.10.0%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/pbwdxze
+		^libxau@1.0.8%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/fteimsh
+		^bzip2@1.0.8%gcc@7.4.0+shared arch=linux-rhel7-skylake_avx512/xdklhbb
+		^libxdmcp@1.1.2%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/bmr7o7e
+		^renderproto@0.11.1%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/erwwglc
+		^gettext@0.20.1%gcc@7.4.0+bzip2+curses+git~libunistring+libxml2+tar+xz arch=linux-rhel7-skylake_avx512/siytymz
+		^fontconfig@2.12.3%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/of5esqj
+		^tk@8.6.8%gcc@7.4.0+xft+xss arch=linux-rhel7-skylake_avx512/lwalxlu
+		^libpng@1.6.37%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/rc2zmcc
+		^libxext@1.3.3%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/vd7e7al
+		^kbproto@1.0.7%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/5zshq2m
+		^freetype@2.10.1%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/nvtnpzp
+		^xextproto@7.3.0%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/oxeobg2
+		^ncurses@6.1%gcc@7.4.0~symlinks~termlib arch=linux-rhel7-skylake_avx512/ejkppmn
+		^xproto@7.0.31%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/hq23tfm
+		^libffi@3.2.1%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/oxfzkhp
+		^readline@8.0%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/vnkrm5a
+		^libxft@2.3.2%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/jvhc6cx
+		^libxscrnsaver@1.2.2%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/kcdyvdg
+		^zlib@1.2.11%gcc@7.4.0+optimize+pic+shared arch=linux-rhel7-skylake_avx512/i7x2gr5
+		^openssl@1.1.1d%gcc@7.4.0+systemcerts arch=linux-rhel7-skylake_avx512/bv2g3xk
+		^libiconv@1.16%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/air3cau
+		^libxrender@0.9.10%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/fuvohwd
+	6yshnia python@2.7.16%gcc@7.4.0+bz2+ctypes+dbm+lzma~nis~optimizations+pic+pyexpat+pythoncmd+readline+shared+sqlite3+ssl~tkinter~ucs4~uuid+zlib arch=linux-rhel7-x86_64
+		^sqlite@3.26.0%gcc@7.4.0~functions arch=linux-rhel7-x86_64/kjqfjhm
+	e2lrwwy python@3.6.8%gcc@7.4.0+bz2+ctypes+dbm+lzma~nis~optimizations+pic+pyexpat+pythoncmd+readline+shared+sqlite3+ssl~tix+tkinter~ucs4~uuid+zlib arch=linux-rhel7-broadwell
+		^sqlite@3.30.1%gcc@7.4.0+column_metadata+fts+fts3+fts5+functions+rtree arch=linux-rhel7-broadwell/salzodk
+		^libx11@1.6.7%gcc@7.4.0 arch=linux-rhel7-broadwell/g5lwfcy
+		^tar@1.32%gcc@7.4.0 arch=linux-rhel7-broadwell/ad6mj5e
+		^libxml2@2.9.9%gcc@7.4.0~python arch=linux-rhel7-broadwell/ojmi2cs
+		^expat@2.2.9%gcc@7.4.0+libbsd arch=linux-rhel7-broadwell/hqijq6e
+		^font-util@1.3.2%gcc@7.4.0 fonts=encodings,font-adobe-100dpi,font-adobe-75dpi,font-adobe-utopia-100dpi,font-adobe-utopia-75dpi,font-adobe-utopia-type1,font-alias,font-arabic-misc,font-bh-100dpi,font-bh-75dpi,font-bh-lucidatypewriter-100dpi,font-bh-lucidatypewriter-75dpi,font-bh-ttf,font-bh-type1,font-bitstream-100dpi,font-bitstream-75dpi,font-bitstream-speedo,font-bitstream-type1,font-cronyx-cyrillic,font-cursor-misc,font-daewoo-misc,font-dec-misc,font-ibm-type1,font-isas-misc,font-jis-misc,font-micro-misc,font-misc-cyrillic,font-misc-ethiopic,font-misc-meltho,font-misc-misc,font-mutt-misc,font-schumacher-misc,font-screen-cyrillic,font-sun-misc,font-winitzki-cyrillic,font-xfree86-type1 arch=linux-rhel7-broadwell/ggandsb
+		^xz@5.2.4%gcc@7.4.0 arch=linux-rhel7-broadwell/iotuo2t
+		^tcl@8.6.8%gcc@7.4.0 arch=linux-rhel7-broadwell/hhhtjr7
+		^libxcb@1.13%gcc@7.4.0 arch=linux-rhel7-broadwell/eblak4a
+		^gdbm@1.18.1%gcc@7.4.0 arch=linux-rhel7-broadwell/4khip3n
+		^libpthread-stubs@0.4%gcc@7.4.0 arch=linux-rhel7-broadwell/qwssfmi
+		^libbsd@0.10.0%gcc@7.4.0 arch=linux-rhel7-broadwell/rxwrtfe
+		^libxau@1.0.8%gcc@7.4.0 arch=linux-rhel7-broadwell/ptu6lb2
+		^bzip2@1.0.8%gcc@7.4.0+shared arch=linux-rhel7-broadwell/ycjdzzp
+		^libxdmcp@1.1.2%gcc@7.4.0 arch=linux-rhel7-broadwell/7c4n27m
+		^renderproto@0.11.1%gcc@7.4.0 arch=linux-rhel7-broadwell/ee46zj5
+		^gettext@0.20.1%gcc@7.4.0+bzip2+curses+git~libunistring+libxml2+tar+xz arch=linux-rhel7-broadwell/asvc2se
+		^fontconfig@2.12.3%gcc@7.4.0 arch=linux-rhel7-broadwell/ojnbyq6
+		^tk@8.6.8%gcc@7.4.0+xft+xss arch=linux-rhel7-broadwell/zyezxsx
+		^libpng@1.6.37%gcc@7.4.0 arch=linux-rhel7-broadwell/3lefhfx
+		^libxext@1.3.3%gcc@7.4.0 arch=linux-rhel7-broadwell/zgry3lz
+		^kbproto@1.0.7%gcc@7.4.0 arch=linux-rhel7-broadwell/4ieaqek
+		^freetype@2.10.1%gcc@7.4.0 arch=linux-rhel7-broadwell/v3egikw
+		^xextproto@7.3.0%gcc@7.4.0 arch=linux-rhel7-broadwell/35zqrnn
+		^ncurses@6.1%gcc@7.4.0~symlinks~termlib arch=linux-rhel7-broadwell/52xyfqw
+		^xproto@7.0.31%gcc@7.4.0 arch=linux-rhel7-broadwell/t4diuxi
+		^libffi@3.2.1%gcc@7.4.0 arch=linux-rhel7-broadwell/ukucyvw
+		^readline@8.0%gcc@7.4.0 arch=linux-rhel7-broadwell/oujrxdj
+		^libxft@2.3.2%gcc@7.4.0 arch=linux-rhel7-broadwell/4nqmvhm
+		^libxscrnsaver@1.2.2%gcc@7.4.0 arch=linux-rhel7-broadwell/2pi3rhi
+		^zlib@1.2.11%gcc@7.4.0+optimize+pic+shared arch=linux-rhel7-broadwell/hkukvg5
+		^openssl@1.1.1d%gcc@7.4.0+systemcerts arch=linux-rhel7-broadwell/gikrdom
+		^libiconv@1.16%gcc@7.4.0 arch=linux-rhel7-broadwell/xwadyfg
+		^libxrender@0.9.10%gcc@7.4.0 arch=linux-rhel7-broadwell/uypq2eo
+	2dsszo5 python@3.6.8%gcc@7.4.0+bz2+ctypes+dbm+lzma~nis~optimizations+pic+pyexpat+pythoncmd+readline+shared+sqlite3+ssl~tix+tkinter~ucs4~uuid+zlib arch=linux-rhel7-skylake_avx512
+		^sqlite@3.30.1%gcc@7.4.0+column_metadata+fts+fts3+fts5+functions+rtree arch=linux-rhel7-skylake_avx512/3en4s7q
+		^libx11@1.6.7%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/orhy5g6
+		^tar@1.32%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/uieukca
+		^libxml2@2.9.9%gcc@7.4.0~python arch=linux-rhel7-skylake_avx512/fajjc45
+		^expat@2.2.9%gcc@7.4.0+libbsd arch=linux-rhel7-skylake_avx512/tsn3xuc
+		^font-util@1.3.2%gcc@7.4.0 fonts=encodings,font-adobe-100dpi,font-adobe-75dpi,font-adobe-utopia-100dpi,font-adobe-utopia-75dpi,font-adobe-utopia-type1,font-alias,font-arabic-misc,font-bh-100dpi,font-bh-75dpi,font-bh-lucidatypewriter-100dpi,font-bh-lucidatypewriter-75dpi,font-bh-ttf,font-bh-type1,font-bitstream-100dpi,font-bitstream-75dpi,font-bitstream-speedo,font-bitstream-type1,font-cronyx-cyrillic,font-cursor-misc,font-daewoo-misc,font-dec-misc,font-ibm-type1,font-isas-misc,font-jis-misc,font-micro-misc,font-misc-cyrillic,font-misc-ethiopic,font-misc-meltho,font-misc-misc,font-mutt-misc,font-schumacher-misc,font-screen-cyrillic,font-sun-misc,font-winitzki-cyrillic,font-xfree86-type1 arch=linux-rhel7-skylake_avx512/wu6rsq3
+		^xz@5.2.4%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/cguxahu
+		^tcl@8.6.8%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/vwnt5q4
+		^libxcb@1.13%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/6jwjgwn
+		^gdbm@1.18.1%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/6qpgo63
+		^libpthread-stubs@0.4%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/252xv3s
+		^libbsd@0.10.0%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/pbwdxze
+		^libxau@1.0.8%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/fteimsh
+		^bzip2@1.0.8%gcc@7.4.0+shared arch=linux-rhel7-skylake_avx512/xdklhbb
+		^libxdmcp@1.1.2%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/bmr7o7e
+		^renderproto@0.11.1%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/erwwglc
+		^gettext@0.20.1%gcc@7.4.0+bzip2+curses+git~libunistring+libxml2+tar+xz arch=linux-rhel7-skylake_avx512/siytymz
+		^fontconfig@2.12.3%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/of5esqj
+		^tk@8.6.8%gcc@7.4.0+xft+xss arch=linux-rhel7-skylake_avx512/lwalxlu
+		^libpng@1.6.37%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/rc2zmcc
+		^libxext@1.3.3%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/vd7e7al
+		^kbproto@1.0.7%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/5zshq2m
+		^freetype@2.10.1%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/nvtnpzp
+		^xextproto@7.3.0%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/oxeobg2
+		^ncurses@6.1%gcc@7.4.0~symlinks~termlib arch=linux-rhel7-skylake_avx512/ejkppmn
+		^xproto@7.0.31%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/hq23tfm
+		^libffi@3.2.1%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/oxfzkhp
+		^readline@8.0%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/vnkrm5a
+		^libxft@2.3.2%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/jvhc6cx
+		^libxscrnsaver@1.2.2%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/kcdyvdg
+		^zlib@1.2.11%gcc@7.4.0+optimize+pic+shared arch=linux-rhel7-skylake_avx512/i7x2gr5
+		^openssl@1.1.1d%gcc@7.4.0+systemcerts arch=linux-rhel7-skylake_avx512/bv2g3xk
+		^libiconv@1.16%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/air3cau
+		^libxrender@0.9.10%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/fuvohwd
+	r3ohs7z python@3.6.8%gcc@7.4.0+bz2+ctypes+dbm+lzma~nis~optimizations+pic+pyexpat+pythoncmd+readline+shared+sqlite3+ssl~tkinter~ucs4~uuid+zlib arch=linux-rhel7-x86_64
+		^xz@5.2.4%gcc@7.4.0 arch=linux-rhel7-x86_64/qh2fwjg
+		^sqlite@3.26.0%gcc@7.4.0~column_metadata~fts3~fts5~functions~rtree arch=linux-rhel7-x86_64/x7fy3nc
+	vxoqdck python@3.6.8%gcc@7.4.0+bz2+ctypes+dbm+lzma~nis~optimizations+pic+pyexpat+pythoncmd+readline+shared+sqlite3+ssl~tkinter~ucs4~uuid+zlib arch=linux-rhel7-x86_64
+		^xz@5.2.4%gcc@7.4.0 arch=linux-rhel7-x86_64/qh2fwjg
+		^sqlite@3.26.0%gcc@7.4.0~functions arch=linux-rhel7-x86_64/kjqfjhm
+	6on2qnp python@3.7.2%gcc@7.4.0+bz2+ctypes+dbm+lzma~nis~optimizations+pic+pyexpat+pythoncmd+readline+shared+sqlite3+ssl~tkinter~ucs4~uuid+zlib arch=linux-rhel7-x86_64
+		^xz@5.2.4%gcc@7.4.0 arch=linux-rhel7-x86_64/qh2fwjg
+		^sqlite@3.26.0%gcc@7.4.0~functions arch=linux-rhel7-x86_64/kjqfjhm
+	u2div2t python@3.7.4%gcc@7.4.0+bz2+ctypes+dbm+lzma~nis~optimizations+pic+pyexpat+pythoncmd+readline+shared+sqlite3+ssl~tix+tkinter~ucs4~uuid+zlib arch=linux-rhel7-skylake_avx512
+		^sqlite@3.30.1%gcc@7.4.0+column_metadata+fts+fts3+fts5+functions+rtree arch=linux-rhel7-skylake_avx512/3en4s7q
+		^libx11@1.6.7%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/orhy5g6
+		^tar@1.32%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/uieukca
+		^libxml2@2.9.9%gcc@7.4.0~python arch=linux-rhel7-skylake_avx512/fajjc45
+		^expat@2.2.9%gcc@7.4.0+libbsd arch=linux-rhel7-skylake_avx512/tsn3xuc
+		^font-util@1.3.2%gcc@7.4.0 fonts=encodings,font-adobe-100dpi,font-adobe-75dpi,font-adobe-utopia-100dpi,font-adobe-utopia-75dpi,font-adobe-utopia-type1,font-alias,font-arabic-misc,font-bh-100dpi,font-bh-75dpi,font-bh-lucidatypewriter-100dpi,font-bh-lucidatypewriter-75dpi,font-bh-ttf,font-bh-type1,font-bitstream-100dpi,font-bitstream-75dpi,font-bitstream-speedo,font-bitstream-type1,font-cronyx-cyrillic,font-cursor-misc,font-daewoo-misc,font-dec-misc,font-ibm-type1,font-isas-misc,font-jis-misc,font-micro-misc,font-misc-cyrillic,font-misc-ethiopic,font-misc-meltho,font-misc-misc,font-mutt-misc,font-schumacher-misc,font-screen-cyrillic,font-sun-misc,font-winitzki-cyrillic,font-xfree86-type1 arch=linux-rhel7-skylake_avx512/wu6rsq3
+		^xz@5.2.4%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/cguxahu
+		^tcl@8.6.8%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/vwnt5q4
+		^libxcb@1.13%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/6jwjgwn
+		^gdbm@1.18.1%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/6qpgo63
+		^libpthread-stubs@0.4%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/252xv3s
+		^libbsd@0.10.0%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/pbwdxze
+		^libxau@1.0.8%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/fteimsh
+		^bzip2@1.0.8%gcc@7.4.0+shared arch=linux-rhel7-skylake_avx512/xdklhbb
+		^libxdmcp@1.1.2%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/bmr7o7e
+		^renderproto@0.11.1%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/erwwglc
+		^gettext@0.20.1%gcc@7.4.0+bzip2+curses+git~libunistring+libxml2+tar+xz arch=linux-rhel7-skylake_avx512/siytymz
+		^fontconfig@2.12.3%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/of5esqj
+		^tk@8.6.8%gcc@7.4.0+xft+xss arch=linux-rhel7-skylake_avx512/lwalxlu
+		^libpng@1.6.37%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/rc2zmcc
+		^libxext@1.3.3%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/vd7e7al
+		^kbproto@1.0.7%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/5zshq2m
+		^freetype@2.10.1%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/nvtnpzp
+		^xextproto@7.3.0%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/oxeobg2
+		^ncurses@6.1%gcc@7.4.0~symlinks~termlib arch=linux-rhel7-skylake_avx512/ejkppmn
+		^xproto@7.0.31%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/hq23tfm
+		^libffi@3.2.1%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/oxfzkhp
+		^readline@8.0%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/vnkrm5a
+		^libxft@2.3.2%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/jvhc6cx
+		^libxscrnsaver@1.2.2%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/kcdyvdg
+		^zlib@1.2.11%gcc@7.4.0+optimize+pic+shared arch=linux-rhel7-skylake_avx512/i7x2gr5
+		^openssl@1.1.1d%gcc@7.4.0+systemcerts arch=linux-rhel7-skylake_avx512/bv2g3xk
+		^libiconv@1.16%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/air3cau
+		^libxrender@0.9.10%gcc@7.4.0 arch=linux-rhel7-skylake_avx512/fuvohwd
+
+==> Error: In this context exactly **one** match is needed: please specify your constraints better.
+Autoloading py-scipy/1.3.3-gcc-7.4.0-fvki7dty
+Autoloading python/3.6.8-gcc-7.4.0-vxoqdckc
+Autoloading sqlite/3.26.0-gcc-7.4.0-7w4fjrtk
+Autoloading readline/7.0-gcc-7.4.0-nrvgi5pu
+Autoloading ncurses/6.1-gcc-7.4.0-6f56ubcf
+Autoloading zlib/1.2.11-gcc-7.4.0-ml43muis
+Autoloading bzip2/1.0.6-gcc-7.4.0-rqzfarod
+Autoloading expat/2.2.5-gcc-7.4.0-muxljdnt
+Autoloading libbsd/0.9.1-gcc-7.4.0-2ncnoj23
+Autoloading openssl/1.1.1b-gcc-7.4.0-egqbashl
+Autoloading xz/5.2.4-gcc-7.4.0-qh2fwjgx
+Autoloading libffi/3.2.1-gcc-7.4.0-7qp3drbe
+Autoloading gdbm/1.18.1-gcc-7.4.0-wqtfnks7
+Autoloading openblas/0.3.7-gcc-7.4.0-clpp4hzr
+Autoloading py-numpy/1.17.4-gcc-7.4.0-xcfkgksf
+Autoloading py-joblib/0.14.0-gcc-7.4.0-wulqogpo
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/externals/joblib/__init__.py:15: FutureWarning: sklearn.externals.joblib is deprecated in 0.21 and will be removed in 0.23. Please import this functionality directly from joblib, which can be installed with: pip install joblib. If this warning is raised when loading pickled models, you may need to re-serialize those models with scikit-learn 0.21+.
+  warnings.warn(msg, category=FutureWarning)
+
+real	0m0.635s
+user	0m0.730s
+sys	0m0.642s
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/externals/joblib/__init__.py:15: FutureWarning: sklearn.externals.joblib is deprecated in 0.21 and will be removed in 0.23. Please import this functionality directly from joblib, which can be installed with: pip install joblib. If this warning is raised when loading pickled models, you may need to re-serialize those models with scikit-learn 0.21+.
+  warnings.warn(msg, category=FutureWarning)
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 24 concurrent workers.
+[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    4.0s
+[Parallel(n_jobs=-1)]: Done 152 tasks      | elapsed:    4.9s
+[Parallel(n_jobs=-1)]: Done 1008 tasks      | elapsed:    7.1s
+[Parallel(n_jobs=-1)]: Done 2408 tasks      | elapsed:   11.4s
+[Parallel(n_jobs=-1)]: Done 4208 tasks      | elapsed:   17.0s
+[Parallel(n_jobs=-1)]: Done 6408 tasks      | elapsed:   23.3s
+[Parallel(n_jobs=-1)]: Done 9008 tasks      | elapsed:   30.4s
+[Parallel(n_jobs=-1)]: Done 12008 tasks      | elapsed:   39.0s
+[Parallel(n_jobs=-1)]: Done 15408 tasks      | elapsed:   49.2s
+[Parallel(n_jobs=-1)]: Done 19208 tasks      | elapsed:  1.0min
+[Parallel(n_jobs=-1)]: Done 23408 tasks      | elapsed:  1.2min
+[Parallel(n_jobs=-1)]: Done 28008 tasks      | elapsed:  1.5min
+[Parallel(n_jobs=-1)]: Done 33008 tasks      | elapsed:  1.7min
+[Parallel(n_jobs=-1)]: Done 38408 tasks      | elapsed:  2.0min
+[Parallel(n_jobs=-1)]: Done 44208 tasks      | elapsed:  2.2min
+[Parallel(n_jobs=-1)]: Done 50408 tasks      | elapsed:  2.5min
+[Parallel(n_jobs=-1)]: Done 57008 tasks      | elapsed:  2.9min
+[Parallel(n_jobs=-1)]: Done 60480 out of 60480 | elapsed:  3.1min finished
+
+real	3m4.268s
+user	55m23.276s
+sys	2m47.163s
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/externals/joblib/__init__.py:15: FutureWarning: sklearn.externals.joblib is deprecated in 0.21 and will be removed in 0.23. Please import this functionality directly from joblib, which can be installed with: pip install joblib. If this warning is raised when loading pickled models, you may need to re-serialize those models with scikit-learn 0.21+.
+  warnings.warn(msg, category=FutureWarning)
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 24 concurrent workers.
+[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    3.7s
+[Parallel(n_jobs=-1)]: Done 152 tasks      | elapsed:    4.7s
+[Parallel(n_jobs=-1)]: Done 936 tasks      | elapsed:    6.6s
+[Parallel(n_jobs=-1)]: Done 2336 tasks      | elapsed:   11.0s
+[Parallel(n_jobs=-1)]: Done 4136 tasks      | elapsed:   16.1s
+[Parallel(n_jobs=-1)]: Done 6336 tasks      | elapsed:   22.4s
+[Parallel(n_jobs=-1)]: Done 8936 tasks      | elapsed:   29.7s
+[Parallel(n_jobs=-1)]: Done 11936 tasks      | elapsed:   38.3s
+[Parallel(n_jobs=-1)]: Done 15336 tasks      | elapsed:   48.8s
+[Parallel(n_jobs=-1)]: Done 19136 tasks      | elapsed:   59.8s
+[Parallel(n_jobs=-1)]: Done 23336 tasks      | elapsed:  1.2min
+[Parallel(n_jobs=-1)]: Done 27936 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done 32936 tasks      | elapsed:  1.7min
+[Parallel(n_jobs=-1)]: Done 38336 tasks      | elapsed:  1.9min
+[Parallel(n_jobs=-1)]: Done 44136 tasks      | elapsed:  2.2min
+[Parallel(n_jobs=-1)]: Done 50336 tasks      | elapsed:  2.5min
+[Parallel(n_jobs=-1)]: Done 56936 tasks      | elapsed:  2.8min
+[Parallel(n_jobs=-1)]: Done 60480 out of 60480 | elapsed:  3.0min finished
+
+real	3m2.854s
+user	56m0.090s
+sys	2m56.600s
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/externals/joblib/__init__.py:15: FutureWarning: sklearn.externals.joblib is deprecated in 0.21 and will be removed in 0.23. Please import this functionality directly from joblib, which can be installed with: pip install joblib. If this warning is raised when loading pickled models, you may need to re-serialize those models with scikit-learn 0.21+.
+  warnings.warn(msg, category=FutureWarning)
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 24 concurrent workers.
+[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    4.1s
+[Parallel(n_jobs=-1)]: Done 152 tasks      | elapsed:    4.8s
+[Parallel(n_jobs=-1)]: Done 864 tasks      | elapsed:    6.6s
+[Parallel(n_jobs=-1)]: Done 2264 tasks      | elapsed:   10.8s
+[Parallel(n_jobs=-1)]: Done 4064 tasks      | elapsed:   15.9s
+[Parallel(n_jobs=-1)]: Done 6264 tasks      | elapsed:   21.9s
+[Parallel(n_jobs=-1)]: Done 8864 tasks      | elapsed:   28.7s
+[Parallel(n_jobs=-1)]: Done 11864 tasks      | elapsed:   36.6s
+[Parallel(n_jobs=-1)]: Done 15264 tasks      | elapsed:   48.1s
+[Parallel(n_jobs=-1)]: Done 18536 tasks      | elapsed:  1.1min
+[Parallel(n_jobs=-1)]: Done 19660 tasks      | elapsed:  1.3min
+[Parallel(n_jobs=-1)]: Done 21768 tasks      | elapsed:  1.7min
+[Parallel(n_jobs=-1)]: Done 23090 tasks      | elapsed:  2.0min
+[Parallel(n_jobs=-1)]: Done 24440 tasks      | elapsed:  2.4min
+[Parallel(n_jobs=-1)]: Done 26010 tasks      | elapsed:  2.9min
+[Parallel(n_jobs=-1)]: Done 29104 tasks      | elapsed:  3.1min
+[Parallel(n_jobs=-1)]: Done 31802 tasks      | elapsed:  3.5min
+[Parallel(n_jobs=-1)]: Done 33984 tasks      | elapsed:  4.0min
+[Parallel(n_jobs=-1)]: Done 35834 tasks      | elapsed:  5.1min
+[Parallel(n_jobs=-1)]: Done 37784 tasks      | elapsed:  8.4min
+[Parallel(n_jobs=-1)]: Done 40504 tasks      | elapsed: 12.1min
+[Parallel(n_jobs=-1)]: Done 45152 tasks      | elapsed: 12.7min
+[Parallel(n_jobs=-1)]: Done 47738 tasks      | elapsed: 13.4min
+[Parallel(n_jobs=-1)]: Done 50088 tasks      | elapsed: 16.6min
+[Parallel(n_jobs=-1)]: Done 53921 tasks      | elapsed: 21.1min
+[Parallel(n_jobs=-1)]: Done 64112 tasks      | elapsed: 21.6min
+[Parallel(n_jobs=-1)]: Done 71346 tasks      | elapsed: 22.3min
+[Parallel(n_jobs=-1)]: Done 75056 tasks      | elapsed: 23.5min
+[Parallel(n_jobs=-1)]: Done 78032 tasks      | elapsed: 25.1min
+[Parallel(n_jobs=-1)]: Done 84864 tasks      | elapsed: 25.9min
+[Parallel(n_jobs=-1)]: Done 88082 tasks      | elapsed: 28.0min
+[Parallel(n_jobs=-1)]: Done 91488 tasks      | elapsed: 34.0min
+[Parallel(n_jobs=-1)]: Done 97002 tasks      | elapsed: 34.8min
+[Parallel(n_jobs=-1)]: Done 100712 tasks      | elapsed: 36.5min
+[Parallel(n_jobs=-1)]: Done 104579 tasks      | elapsed: 43.0min
+[Parallel(n_jobs=-1)]: Done 117336 tasks      | elapsed: 43.6min
+[Parallel(n_jobs=-1)]: Done 128116 tasks      | elapsed: 44.5min
+[Parallel(n_jobs=-1)]: Done 135968 tasks      | elapsed: 45.5min
+[Parallel(n_jobs=-1)]: Done 140154 tasks      | elapsed: 48.3min
+[Parallel(n_jobs=-1)]: Done 145410 tasks      | elapsed: 53.8min
+[Parallel(n_jobs=-1)]: Done 151034 tasks      | elapsed: 55.0min
+[Parallel(n_jobs=-1)]: Done 155184 tasks      | elapsed: 61.4min
+[Parallel(n_jobs=-1)]: Done 169808 tasks      | elapsed: 63.4min
+[Parallel(n_jobs=-1)]: Done 182104 tasks      | elapsed: 64.5min
+[Parallel(n_jobs=-1)]: Done 189234 tasks      | elapsed: 65.5min
+[Parallel(n_jobs=-1)]: Done 193784 tasks      | elapsed: 70.9min
+[Parallel(n_jobs=-1)]: Done 202082 tasks      | elapsed: 74.5min
+[Parallel(n_jobs=-1)]: Done 206832 tasks      | elapsed: 80.3min
+[Parallel(n_jobs=-1)]: Done 223280 tasks      | elapsed: 83.1min
+[Parallel(n_jobs=-1)]: Done 232288 tasks      | elapsed: 84.4min
+[Parallel(n_jobs=-1)]: Done 242346 tasks      | elapsed: 85.7min
+[Parallel(n_jobs=-1)]: Done 248632 tasks      | elapsed: 88.7min
+[Parallel(n_jobs=-1)]: Done 257018 tasks      | elapsed: 90.9min
+[Parallel(n_jobs=-1)]: Done 272808 tasks      | elapsed: 93.0min
+[Parallel(n_jobs=-1)]: Done 283492 tasks      | elapsed: 94.7min
+[Parallel(n_jobs=-1)]: Done 292976 tasks      | elapsed: 96.1min
+[Parallel(n_jobs=-1)]: Done 299904 tasks      | elapsed: 99.3min
+[Parallel(n_jobs=-1)]: Done 309032 tasks      | elapsed: 101.6min
+[Parallel(n_jobs=-1)]: Done 327080 tasks      | elapsed: 103.8min
+[Parallel(n_jobs=-1)]: Done 345192 tasks      | elapsed: 105.4min
+[Parallel(n_jobs=-1)]: Done 353428 tasks      | elapsed: 108.7min
+[Parallel(n_jobs=-1)]: Done 362168 tasks      | elapsed: 111.6min
+[Parallel(n_jobs=-1)]: Done 384648 tasks      | elapsed: 113.5min
+[Parallel(n_jobs=-1)]: Done 399176 tasks      | elapsed: 115.9min
+[Parallel(n_jobs=-1)]: Done 409540 tasks      | elapsed: 118.6min
+[Parallel(n_jobs=-1)]: Done 420072 tasks      | elapsed: 122.0min
+[Parallel(n_jobs=-1)]: Done 446162 tasks      | elapsed: 123.4min
+[Parallel(n_jobs=-1)]: Done 453272 tasks      | elapsed: 130.4min
+[Parallel(n_jobs=-1)]: Done 463002 tasks      | elapsed: 133.4min
+[Parallel(n_jobs=-1)]: Done 477536 tasks      | elapsed: 141.5min
+[Parallel(n_jobs=-1)]: Done 500114 tasks      | elapsed: 143.2min
+[Parallel(n_jobs=-1)]: Done 508850 tasks      | elapsed: 151.3min
+[Parallel(n_jobs=-1)]: Done 517370 tasks      | elapsed: 156.6min
+[Parallel(n_jobs=-1)]: Done 530608 tasks      | elapsed: 161.1min
+[Parallel(n_jobs=-1)]: Done 545508 tasks      | elapsed: 162.6min
+[Parallel(n_jobs=-1)]: Done 555104 tasks      | elapsed: 166.8min
+[Parallel(n_jobs=-1)]: Done 566834 tasks      | elapsed: 173.0min
+[Parallel(n_jobs=-1)]: Done 578664 tasks      | elapsed: 181.0min
+[Parallel(n_jobs=-1)]: Done 594364 tasks      | elapsed: 182.6min
+[Parallel(n_jobs=-1)]: Done 607352 tasks      | elapsed: 187.3min
+[Parallel(n_jobs=-1)]: Done 618210 tasks      | elapsed: 193.1min
+[Parallel(n_jobs=-1)]: Done 634088 tasks      | elapsed: 201.1min
+[Parallel(n_jobs=-1)]: Done 658322 tasks      | elapsed: 203.6min
+[Parallel(n_jobs=-1)]: Done 671424 tasks      | elapsed: 207.6min
+[Parallel(n_jobs=-1)]: Done 698312 tasks      | elapsed: 210.6min
+[Parallel(n_jobs=-1)]: Done 713135 tasks      | elapsed: 214.5min
+[Parallel(n_jobs=-1)]: Done 726301 tasks      | elapsed: 218.4min
+[Parallel(n_jobs=-1)]: Done 748376 tasks      | elapsed: 220.5min
+[Parallel(n_jobs=-1)]: Done 763388 tasks      | elapsed: 223.5min
+[Parallel(n_jobs=-1)]: Done 777408 tasks      | elapsed: 228.3min
+[Parallel(n_jobs=-1)]: Done 795052 tasks      | elapsed: 230.3min
+[Parallel(n_jobs=-1)]: Done 812360 tasks      | elapsed: 232.3min
+[Parallel(n_jobs=-1)]: Done 825762 tasks      | elapsed: 236.2min
+[Parallel(n_jobs=-1)]: Done 829440 out of 829440 | elapsed: 239.1min finished
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+
+real	239m11.275s
+user	5422m34.881s
+sys	9m35.511s
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/externals/joblib/__init__.py:15: FutureWarning: sklearn.externals.joblib is deprecated in 0.21 and will be removed in 0.23. Please import this functionality directly from joblib, which can be installed with: pip install joblib. If this warning is raised when loading pickled models, you may need to re-serialize those models with scikit-learn 0.21+.
+  warnings.warn(msg, category=FutureWarning)
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 24 concurrent workers.
+[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed:    3.8s
+[Parallel(n_jobs=-1)]: Done 152 tasks      | elapsed:    4.9s
+[Parallel(n_jobs=-1)]: Done 864 tasks      | elapsed:    6.6s
+[Parallel(n_jobs=-1)]: Done 2264 tasks      | elapsed:   10.4s
+[Parallel(n_jobs=-1)]: Done 4064 tasks      | elapsed:   14.9s
+[Parallel(n_jobs=-1)]: Done 6264 tasks      | elapsed:   20.3s
+[Parallel(n_jobs=-1)]: Done 8864 tasks      | elapsed:   26.5s
+[Parallel(n_jobs=-1)]: Done 11864 tasks      | elapsed:   33.6s
+[Parallel(n_jobs=-1)]: Done 15264 tasks      | elapsed:   44.0s
+[Parallel(n_jobs=-1)]: Done 18608 tasks      | elapsed:   59.4s
+[Parallel(n_jobs=-1)]: Done 19756 tasks      | elapsed:  1.2min
+[Parallel(n_jobs=-1)]: Done 21792 tasks      | elapsed:  1.5min
+[Parallel(n_jobs=-1)]: Done 23114 tasks      | elapsed:  1.9min
+[Parallel(n_jobs=-1)]: Done 24464 tasks      | elapsed:  2.2min
+[Parallel(n_jobs=-1)]: Done 26010 tasks      | elapsed:  2.7min
+[Parallel(n_jobs=-1)]: Done 29080 tasks      | elapsed:  2.9min
+[Parallel(n_jobs=-1)]: Done 31802 tasks      | elapsed:  3.4min
+[Parallel(n_jobs=-1)]: Done 33816 tasks      | elapsed:  4.2min
+[Parallel(n_jobs=-1)]: Done 35666 tasks      | elapsed:  5.5min
+[Parallel(n_jobs=-1)]: Done 37616 tasks      | elapsed: 11.1min
+[Parallel(n_jobs=-1)]: Done 40992 tasks      | elapsed: 17.3min
+[Parallel(n_jobs=-1)]: Done 45608 tasks      | elapsed: 18.3min
+[Parallel(n_jobs=-1)]: Done 47858 tasks      | elapsed: 19.3min
+[Parallel(n_jobs=-1)]: Done 50208 tasks      | elapsed: 24.5min
+[Parallel(n_jobs=-1)]: Done 53864 tasks      | elapsed: 31.7min
+[Parallel(n_jobs=-1)]: Done 64064 tasks      | elapsed: 32.1min
+[Parallel(n_jobs=-1)]: Done 71370 tasks      | elapsed: 32.7min
+[Parallel(n_jobs=-1)]: Done 74552 tasks      | elapsed: 33.5min
+[Parallel(n_jobs=-1)]: Done 77402 tasks      | elapsed: 35.0min
+[Parallel(n_jobs=-1)]: Done 84216 tasks      | elapsed: 36.4min
+[Parallel(n_jobs=-1)]: Done 87530 tasks      | elapsed: 38.0min
+[Parallel(n_jobs=-1)]: Done 90680 tasks      | elapsed: 49.6min
+[Parallel(n_jobs=-1)]: Done 97266 tasks      | elapsed: 50.8min
+[Parallel(n_jobs=-1)]: Done 100616 tasks      | elapsed: 52.7min
+[Parallel(n_jobs=-1)]: Done 104213 tasks      | elapsed: 64.1min
+[Parallel(n_jobs=-1)]: Done 118392 tasks      | elapsed: 64.8min
+[Parallel(n_jobs=-1)]: Done 129724 tasks      | elapsed: 65.7min
+[Parallel(n_jobs=-1)]: Done 136064 tasks      | elapsed: 66.8min
+[Parallel(n_jobs=-1)]: Done 139914 tasks      | elapsed: 70.4min
+[Parallel(n_jobs=-1)]: Done 146528 tasks      | elapsed: 80.3min
+[Parallel(n_jobs=-1)]: Done 151898 tasks      | elapsed: 82.3min
+[Parallel(n_jobs=-1)]: Done 156864 tasks      | elapsed: 94.6min
+[Parallel(n_jobs=-1)]: Done 173864 tasks      | elapsed: 95.4min
+[Parallel(n_jobs=-1)]: Done 185224 tasks      | elapsed: 96.4min
+[Parallel(n_jobs=-1)]: Done 190434 tasks      | elapsed: 98.3min
+[Parallel(n_jobs=-1)]: Done 195920 tasks      | elapsed: 110.5min
+[Parallel(n_jobs=-1)]: Done 203786 tasks      | elapsed: 112.6min
+[Parallel(n_jobs=-1)]: Done 211248 tasks      | elapsed: 124.9min
+[Parallel(n_jobs=-1)]: Done 230210 tasks      | elapsed: 126.1min
+[Parallel(n_jobs=-1)]: Done 239312 tasks      | elapsed: 127.3min
+[Parallel(n_jobs=-1)]: Done 244650 tasks      | elapsed: 130.7min
+[Parallel(n_jobs=-1)]: Done 254168 tasks      | elapsed: 135.7min
+[Parallel(n_jobs=-1)]: Done 259694 tasks      | elapsed: 142.6min
+[Parallel(n_jobs=-1)]: Done 281088 tasks      | elapsed: 143.9min
+[Parallel(n_jobs=-1)]: Done 291290 tasks      | elapsed: 145.4min
+[Parallel(n_jobs=-1)]: Done 297200 tasks      | elapsed: 150.0min
+[Parallel(n_jobs=-1)]: Done 306138 tasks      | elapsed: 153.9min
+[Parallel(n_jobs=-1)]: Done 313760 tasks      | elapsed: 160.9min
+[Parallel(n_jobs=-1)]: Done 337160 tasks      | elapsed: 162.2min
+[Parallel(n_jobs=-1)]: Done 347664 tasks      | elapsed: 166.0min
+[Parallel(n_jobs=-1)]: Done 357722 tasks      | elapsed: 171.1min
+[Parallel(n_jobs=-1)]: Done 366536 tasks      | elapsed: 178.3min
+[Parallel(n_jobs=-1)]: Done 391536 tasks      | elapsed: 179.7min
+[Parallel(n_jobs=-1)]: Done 400208 tasks      | elapsed: 183.5min
+[Parallel(n_jobs=-1)]: Done 410210 tasks      | elapsed: 188.8min
+[Parallel(n_jobs=-1)]: Done 420048 tasks      | elapsed: 195.7min
+[Parallel(n_jobs=-1)]: Done 446210 tasks      | elapsed: 197.1min
+[Parallel(n_jobs=-1)]: Done 453056 tasks      | elapsed: 208.0min
+[Parallel(n_jobs=-1)]: Done 463914 tasks      | elapsed: 215.7min
+[Parallel(n_jobs=-1)]: Done 482720 tasks      | elapsed: 226.1min
+[Parallel(n_jobs=-1)]: Done 501122 tasks      | elapsed: 228.5min
+[Parallel(n_jobs=-1)]: Done 510624 tasks      | elapsed: 241.1min
+[Parallel(n_jobs=-1)]: Done 518186 tasks      | elapsed: 253.8min
+[Parallel(n_jobs=-1)]: Done 532376 tasks      | elapsed: 256.3min
+[Parallel(n_jobs=-1)]: Done 550458 tasks      | elapsed: 258.4min
+[Parallel(n_jobs=-1)]: Done 558496 tasks      | elapsed: 272.0min
+[Parallel(n_jobs=-1)]: Done 568178 tasks      | elapsed: 279.2min
+[Parallel(n_jobs=-1)]: Done 589080 tasks      | elapsed: 287.8min
+[Parallel(n_jobs=-1)]: Done 605378 tasks      | elapsed: 290.8min
+[Parallel(n_jobs=-1)]: Done 617360 tasks      | elapsed: 304.8min
+[Parallel(n_jobs=-1)]: Done 634680 tasks      | elapsed: 318.0min
+[Parallel(n_jobs=-1)]: Done 657320 tasks      | elapsed: 320.1min
+[Parallel(n_jobs=-1)]: Done 669938 tasks      | elapsed: 327.9min
+[Parallel(n_jobs=-1)]: Done 691272 tasks      | elapsed: 335.2min
+[Parallel(n_jobs=-1)]: Done 710666 tasks      | elapsed: 339.4min
+[Parallel(n_jobs=-1)]: Done 722432 tasks      | elapsed: 345.2min
+[Parallel(n_jobs=-1)]: Done 736140 tasks      | elapsed: 352.5min
+[Parallel(n_jobs=-1)]: Done 754760 tasks      | elapsed: 354.2min
+[Parallel(n_jobs=-1)]: Done 769160 tasks      | elapsed: 362.2min
+[Parallel(n_jobs=-1)]: Done 780576 tasks      | elapsed: 370.1min
+[Parallel(n_jobs=-1)]: Done 798676 tasks      | elapsed: 371.9min
+[Parallel(n_jobs=-1)]: Done 813248 tasks      | elapsed: 374.3min
+[Parallel(n_jobs=-1)]: Done 826866 tasks      | elapsed: 383.4min
+[Parallel(n_jobs=-1)]: Done 829440 out of 829440 | elapsed: 388.5min finished
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/svm/_base.py:947: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  "the number of iterations.", ConvergenceWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='squared_hinge' are not supported when dual=True, Parameters: penalty='l1', loss='squared_hinge', dual=True
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l1' and loss='hinge' is not supported, Parameters: penalty='l1', loss='hinge', dual=False
+
+  FitFailedWarning)
+/.autofs/tools/spack/opt/spack/linux-rhel7-x86_64/gcc-7.4.0/py-scikit-learn-0.22-bblye5gz3gsqwh3c4wkeqv42dnfboodc/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:536: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+ValueError: Unsupported set of arguments: The combination of penalty='l2' and loss='hinge' are not supported when dual=False, Parameters: penalty='l2', loss='hinge', dual=False
+
+  FitFailedWarning)
+
+real	388m35.793s
+user	9016m21.765s
+sys	9m40.750s

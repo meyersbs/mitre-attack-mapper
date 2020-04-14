@@ -1,0 +1,36 @@
+Namespace(append_hosts=True, append_states=True, command='test', dataset='./data/CPTC2018.csv', ignore_singles=True, model_type='nb', target='tactics', trial_prefix='trial07')
+Read 261 data points from './data/CPTC2018.csv'.
+Fitting 10 folds for each of 6048 candidates, totalling 60480 fits
+Best Score for MultinomialNB:
+    0.8205882352941177
+Best Parameters for MultinomialNB:
+    clf__alpha: 0.1
+    clf__fit_prior: True
+    tfidf__use_idf: True
+    vect__analyzer: word
+    vect__lowercase: True
+    vect__ngram_range: (2, 3)
+    vect__stop_words: english
+    vect__strip_accents: None
+                                                        precision    recall  f1-score   support
+
+                                     Credential Access       0.00      0.00      0.00         1
+                     Credential Access, Initial Access       0.00      0.00      0.00         2
+                   Credential Access, Lateral Movement       0.86      0.86      0.86         7
+ Credential Access, Lateral Movement, Lateral Movement       0.54      1.00      0.70         7
+Credential Access, Lateral Movement, Lateral Movement,       0.00      0.00      0.00         1
+                                             Discovery       0.89      0.94      0.92        36
+                                  Discovery, Discovery       0.00      0.00      0.00         2
+                           Execution, Lateral Movement       1.00      0.67      0.80         3
+                                        Initial Access       0.00      0.00      0.00         2
+                                      Lateral Movement       0.44      1.00      0.62         4
+                    Lateral Movement, Lateral Movement       0.00      0.00      0.00         3
+                                           Persistence       0.00      0.00      0.00         2
+                                            Pre-Attack       0.86      0.92      0.89        13
+                                  Privilege Escalation       0.00      0.00      0.00         2
+                     Privilege Escalation, Persistence       0.00      0.00      0.00         0
+
+                                              accuracy                           0.76        85
+                                             macro avg       0.31      0.36      0.32        85
+                                          weighted avg       0.68      0.76      0.71        85
+

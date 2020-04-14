@@ -1,0 +1,45 @@
+Namespace(append_hosts=True, append_states=True, command='test', dataset='./data/CPTC2018.csv', ignore_singles=True, model_type='lsvc', target='techniques', trial_prefix='trial07')
+Read 261 data points from './data/CPTC2018.csv'.
+Fitting 10 folds for each of 82944 candidates, totalling 829440 fits
+Best Score for LinearSVC:
+    0.8511029411764707
+Best Parameters for LinearSVC:
+    clf__dual: True
+    clf__fit_intercept: True
+    clf__loss: hinge
+    clf__max_iter: 5000
+    clf__multi_class: crammer_singer
+    clf__penalty: l2
+    clf__tol: 0.1
+    tfidf__use_idf: False
+    vect__analyzer: word
+    vect__lowercase: True
+    vect__ngram_range: (2, 2)
+    vect__stop_words: None
+    vect__strip_accents: None
+                                                                    precision    recall  f1-score   support
+
+                          Automated Collection, Credential Dumping       1.00      1.00      1.00         1
+                                      Brute Force, Remote Services       1.00      1.00      1.00         6
+                                       Brute Force, Valid Accounts       0.00      0.00      0.00         1
+                      Brute Force, Valid Accounts, Remote Services       0.86      1.00      0.92         6
+                                                    Create Account       0.00      0.00      0.00         1
+Execution for Client Exploitation, Exploitation of Remote Services       0.00      0.00      0.00         2
+Execution for client exploitation, Exploitation of Remote Services       0.50      0.33      0.40         3
+       Exploitation for Privilege Escalation, Account Manipulation       1.00      1.00      1.00         1
+                                   Exploitation of Remote Services       0.00      0.00      0.00         0
+                                          Network Service Scanning       0.71      0.97      0.82        31
+             Network Service Scanning, Security Software Discovery       0.00      0.00      0.00         3
+                                           Network Share Discovery       0.00      0.00      0.00         2
+                                                        Pre-Attack       0.79      0.92      0.85        12
+                                                 Process Discovery       0.00      0.00      0.00         2
+                                                   Remote Services       1.00      0.50      0.67         2
+                                   Remote Services, Create Account       0.00      0.00      0.00         1
+                                   Remote Services, Valid Accounts       1.00      1.00      1.00         1
+                                                    Valid Accounts       0.00      0.00      0.00         2
+                                   Valid Accounts, Remote Services       0.67      0.80      0.73         5
+
+                                                          accuracy                           0.76        82
+                                                         macro avg       0.45      0.45      0.44        82
+                                                      weighted avg       0.64      0.76      0.69        82
+

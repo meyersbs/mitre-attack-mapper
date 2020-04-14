@@ -1,0 +1,64 @@
+Namespace(append_hosts=False, append_states=False, command='info', dataset='./data/CPTC2018.csv', ignore_singles=False, model_type=None, target='tactics', trial_prefix='')
+Read 261 data points from './data/CPTC2018.csv'.
+DATASET INFO:
+  Data Points: 261
+  TACTICS:
+    'Discovery': 116
+    'Credential Access, Initial Access': 3
+    'Credential Access': 2
+    'Initial Access': 3
+    'Privilege Escalation': 3
+    'Lateral Movement': 23
+    'Privilege Escalation, Persistence': 3
+    'Persistence': 3
+    'Credential Access, Lateral Movement, Lateral Movement': 23
+    'Pre-Attack': 25
+    'Credential Access, Lateral Movement': 23
+    'Execution, Lateral Movement': 7
+    'Discovery, Discovery': 5
+    'Discovery, Credential Access': 1
+    'Credential Access, Lateral Movement, Lateral Movement,': 3
+    'Lateral Movement, Lateral Movement': 6
+    'Collection, Credential Access': 4
+    'Brute Force, Valid Accounts, Remote Services': 1
+    'Lateral Movement, Privlege Escalation': 1
+    'Collection': 2
+    'Lateral Movement, Persistence': 2
+    'Execution': 1
+    'Execution, Lateral Movement, Lateral Movement': 1
+  TECHNIQUES:
+    'Network Service Scanning': 105
+    'Brute Force, Valid Accounts': 3
+    'Brute Force': 1
+    'Valid Accounts': 3
+    'Exploitation for Privilege Escalation': 1
+    'Valid Accounts, Remote Services': 15
+    'Drive-by Compromise': 2
+    'Exploitation for Privilege Escalation, Account Manipulation': 3
+    'Network Share Discovery': 2
+    'Create Account': 3
+    'Valid Accounts, Remote Desktop Protocol': 1
+    'Remote Services, Valid Accounts': 2
+    'Pre-Attack': 27
+    'Brute Force, Valid Accounts, Remote Services': 26
+    'Brute Force, Remote Services': 21
+    'Execution for client exploitation, Exploitation of Remote Services': 5
+    'Remote File Copy': 2
+    'System Service Discovery': 1
+    'Network Service Scanning, Security Software Discovery': 9
+    'Network Service Scanning, Credentials in Files': 1
+    'Execution for Client Exploitation, Exploitation of Remote Services': 2
+    'Data From Local System, Credential Dumping': 1
+    'Automated Collection, Credential Dumping': 2
+    'Remote Services': 6
+    'Process Discovery': 2
+    'Exploitation of Remote Services, Exploitation for Privlege Escalation': 1
+    'Automated Collection': 1
+    'Credential Dumping': 1
+    'Remote Services, Create Account': 2
+    'Data from Information Repositories': 1
+    'Exploitation of Remote Services': 2
+    'File System Permissions Weakness': 1
+    'Command Line Interface, Valid Accounts, Remote Services': 1
+    'Collection, Credential Access': 1
+    'Remote Desktop Protocol': 4

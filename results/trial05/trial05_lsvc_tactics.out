@@ -1,0 +1,42 @@
+Namespace(append_hosts=False, append_states=False, command='test', dataset='./data/CPTC2018.csv', ignore_singles=True, model_type='lsvc', target='tactics', trial_prefix='trial05')
+Read 261 data points from './data/CPTC2018.csv'.
+Fitting 10 folds for each of 82944 candidates, totalling 829440 fits
+Best Score for LinearSVC:
+    0.6725490196078432
+Best Parameters for LinearSVC:
+    clf__dual: True
+    clf__fit_intercept: True
+    clf__loss: hinge
+    clf__max_iter: 1000
+    clf__multi_class: crammer_singer
+    clf__penalty: l1
+    clf__tol: 0.1
+    tfidf__use_idf: True
+    vect__analyzer: word
+    vect__lowercase: True
+    vect__ngram_range: (1, 1)
+    vect__stop_words: None
+    vect__strip_accents: None
+                                                        precision    recall  f1-score   support
+
+                                            Collection       0.00      0.00      0.00         1
+                         Collection, Credential Access       1.00      0.33      0.50         3
+                                     Credential Access       0.00      0.00      0.00         2
+                     Credential Access, Initial Access       0.00      0.00      0.00         1
+                   Credential Access, Lateral Movement       0.50      0.80      0.62         5
+ Credential Access, Lateral Movement, Lateral Movement       0.89      0.80      0.84        10
+Credential Access, Lateral Movement, Lateral Movement,       0.00      0.00      0.00         1
+                                             Discovery       0.74      0.89      0.81        38
+                                  Discovery, Discovery       0.33      0.33      0.33         3
+                           Execution, Lateral Movement       0.20      1.00      0.33         1
+                                        Initial Access       1.00      1.00      1.00         1
+                                      Lateral Movement       0.80      0.50      0.62         8
+                    Lateral Movement, Lateral Movement       0.00      0.00      0.00         0
+                                           Persistence       0.00      0.00      0.00         1
+                                            Pre-Attack       1.00      0.44      0.62         9
+                     Privilege Escalation, Persistence       1.00      1.00      1.00         1
+
+                                              accuracy                           0.69        85
+                                             macro avg       0.47      0.44      0.42        85
+                                          weighted avg       0.72      0.69      0.68        85
+
