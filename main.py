@@ -306,6 +306,91 @@ def testLSVC(data, labels, target_class, test_size, trial_prefix):
     f.close()
 
 
+#### TRAIN FUNCTIONS ##########################################################
+def trainBest(data, labels, target_class, model_type, trial_prefix):
+    """
+    Re-train the best model using all available training data.
+
+    GIVEN:
+      data (list)           list of events
+      labels (dict)         human-annotated labels for data
+      target_class (str)    one of ["tactics", "techniques"]
+      model_type (str)      one of ["nb", "lsvc"] denoting which type of model
+                            to build
+      trial_prefix (int)    best trial to use for re-training
+    """
+
+    # Determine best model parameters to use
+    model_map = {"nb": "MultinomalNB", "lsvc": "LinearSVC"}
+    best_params_file = "{}/{}_{}_{}_best_params.json".format(
+        trial_prefix, trial_prefix, model_map[model_type], target_class)
+    # Load best model params from disk
+    best_params = dict()
+    with open(os.path.join(MODELS_PATH, best_params_file), "r") as f:
+        best_params = json.load(f)
+
+    # Train new model with best params
+    pipe_best = Pipeline([
+        ("vect", CountVectorizer(
+            analyzer=best_params["vect__analyzer"],
+            lowercase=best_params["vect__lowercase"],
+            ngram_range=best_params["vect__ngram_range"],
+            stop_words=best_params["vect__stop_words"],
+            strip_accents=best_params["vect__strip_accents"])),
+        ("tfidf", TfidfTransformer(
+            use_idf=best_params["tfidf__use_idf"])),
+        ("clf", LinearSVC(
+            dual=best_params["clf__dual"],
+            fit_intercept=best_params["clf__fit_intercept"],
+            loss=best_params["clf__loss"],
+            max_iter=best_params["clf__max_iter"],
+            multi_class=best_params["clf__multi_class"],
+            penalty=best_params["clf__penalty"],
+            tol=best_params["clf__tol"]))
+    ])
+    pipe_best.fit(data, labels[target_class])
+
+    # Dump best model to disk
+    outfile = os.path.join(MODELS_PATH, "best_{}_{}.pkl".format(model_map[model_type], target_class))
+    joblib.dump(pipe_best, outfile)
+    # Dump best model parameters to disk
+    params_outfile = os.path.join(MODELS_PATH, "best_{}_{}_params.json".format(model_map[model_type], target_class))
+    f = open(params_outfile, "w")
+    f.write(json.dumps(best_params))
+    f.close()
+
+    return pipe_best, best_params
+
+
+#### CLASSIFY FUNCTIONS ########################################################
+def classify(data, target_class, model_type, best_model, data_path):
+    """
+    Classify the data using the best model.
+
+    GIVEN:
+      data (ist)            list of events to be classified
+      target_class (str)    one of ["tactics", "techniques"]
+      model_type (str)      one of ["nb", "lsvc"]
+      best_model (model)    the best model
+      data_path (str)       relative path for data being classified
+    """
+
+    # Classify new data using best model
+    model_map = {"nb": "MultinomalNB", "lsvc": "LinearSVC"}
+    print("Classifying {} for new data with best {} model.".format(
+        target_class, model_map[model_type]))
+    predictions = best_model.predict(data)
+
+    # Write predictions to disk
+    data_name = data_path.split("/")[-1].rstrip(".csv")
+    print(data_name)
+    outfile = "predictions_{}_{}_{}.csv".format(
+        model_map[model_type], target_class, data_name)
+    with open(outfile, "w") as f:
+        for pred in predictions:
+            f.write(pred + "\n")
+
+
 #### MAIN ######################################################################
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
@@ -338,6 +423,10 @@ if __name__ == "__main__":
         "--ignore_singles", type=bool, choices=[True, False], default=False,
         help="Whether or not to remove tactics/techniques that only occur once "
         "from the dataset."
+    )
+    parser.add_argument(
+        "--classify_dataset", type=str,
+        help="Relative path to dataset (CSV) to use for classification."
     )
     parser.add_argument(
         "command", choices=["info", "test", "train", "classify"],
@@ -375,7 +464,29 @@ if __name__ == "__main__":
         elif args.model_type == "lsvc":
             testLSVC(data, labels, args.target, 0.33, args.trial_prefix)
     elif args.command == "train":
-        sys.exit("Command 'train' is not yet implemented.")
+        if args.target is None or args.model_type is None or args.trial_prefix is None:
+            sys.exit("Arguments '--model_type', '--target', and '--trial_prefix'"
+                " required for 'command=train'.")
+
+        data, hosts, labels = readData(args.dataset)
+        if args.ignore_singles == True:
+            data, hosts, labels = removeSingles(data, hosts, labels, args.target)
+        data = augmentData(data, hosts, labels, args.target, args.append_states, args.append_hosts)
+        trainBest(data, labels, args.target, args.model_type, args.trial_prefix)
     elif args.command == "classify":
-        sys.exit("Command 'classify' is not yet implemented.")
+        if args.target is None or args.model_type is None or args.trial_prefix is None or args.classify_dataset is None:
+            sys.exit("Arguments '--model_type', '--target', '--trial_prefix', "
+                    "and '--classify_dataset' required for 'command=classify'.")
+
+        data, hosts, labels = readData(args.dataset)
+        if args.ignore_singles == True:
+            data, hosts, labels = removeSingles(data, hosts, labels, args.target)
+        data = augmentData(data, hosts, labels, args.target, args.append_states, args.append_hosts)
+        best_model, best_params = trainBest(data, labels, args.target, args.model_type, args.trial_prefix)
+
+        data, hosts, labels = readData(args.classify_dataset)
+        if args.ignore_singles == True:
+            data, hosts, labels = removeSingles(data, hosts, labels, args.target)
+        data = augmentData(data, hosts, labels, args.target, args.append_states, args.append_hosts)
+        classify(data, args.target, args.model_type, best_model, args.classify_dataset)
 
