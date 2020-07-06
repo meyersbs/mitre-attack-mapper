@@ -10,7 +10,9 @@ Run `sudo pip3 install -r requirements.txt` to install the required Python libra
 ``` bash
     usage: main.py [-h] [--append_states {True,False}]
                    [--append_hosts {True,False}] [--model_type {nb,lsvc}]
-                   [--target {tactics,techniques}]
+                   [--target {tactics,techniques}] [--trial_prefix TRIAL_PREFIX]
+                   [--ignore_singles {True,False}]
+                   [--classify_dataset CLASSIFY_DATASET]
                    {info,test,train,classify} dataset
 
     Map Splunk logs to MITRE ATT&CK states with Scikit-Learn.
@@ -21,23 +23,30 @@ Run `sudo pip3 install -r requirements.txt` to install the required Python libra
                             specified dataset. Test does 10-fold CV to find the
                             best feature combinations. Train builds a new model
                             using all data and the best feature set. Classify
-                            uses the best model to classify a new dataset.
+			    uses the best model to classify a new dataset.
       dataset               Relative path to the dataset (CSV) to use.
 
     optional arguments:
       -h, --help            show this help message and exit
       --append_states {True,False}
                             Whether or not to append tactics/techniques to the
-                            raw data before testing/training. Default: False.
+			    raw data before testing/training. Default: False.
       --append_hosts {True,False}
                             Whether or not to append host types to the raw data
                             before testing/training. Default: False.
       --model_type {nb,lsvc}
                             The type of model to use. Either Multinomial Naive
-                            Bayes (nb) or Linear Support Vector Classifier
-                            (lsvc).
+                            Bayes (nb) or Linear Support Vector Classifier (lsvc).
       --target {tactics,techniques}
                             The target class for testing, training, and
+                            classification.
+      --trial_prefix TRIAL_PREFIX
+                            String to prefix to model files saved to disk.
+      --ignore_singles {True,False}
+                            Whether or not to remove tactics/techniques that
+   			    only occur once from the dataset.
+      --classify_dataset CLASSIFY_DATASET
+                            Relative path to dataset (CSV) to use for
                             classification.
 ```
 
@@ -113,15 +122,15 @@ Credential Access, Lateral Movement, Lateral Movement       0.78      0.70      
 
 #### Train
 
-<b>NOTE:</b> Not yet implemented.
+Trains a new model on all available data (no train/test split) with the same feature combination as the model specified by `--trial_prefix`. The new model and its parameters are saved to disk.
 
-Trains a new model using the best feature combination and all of the available data in dataset.
+Command: `./main.py train <dataset> --model_type={nb, lsvc} --target={tactics, techniques} --append_states={True, False} --append_hosts={True, False} --trial_prefix=*`
 
 #### Classify
 
-<b>NOTE:</b> Not yet implemented.
+Runs the `train` command to train a new model on `<dataset>` and then classifies the tactics/techniques for new data in `<classify_dataset>`. Predictions are saved to disk.
 
-Loads the best model from disk and classifies tactics/techniques for a new dataset.
+Command: `./main.py classify <dataset> --model_type={nb, lsvc} --target={tactics, techniques} --append_states={True, False} --append_hosts={True, False} --trial_prefix=* --classify_dataset=<classify_dataset>`
 
 ## Runtime
 
@@ -133,9 +142,13 @@ Results are saved to `./results/trial<#>/`. Each trial runs the `test` command f
 
 | Trial | IP Sub. | Timestamp Sub. | Append State | Append Host | NB Tact. Acc. | NB Tech. Acc. | LSVC Tact. Acc. | LSVC Tech. Acc. |
 |-------|---------|----------------|--------------|-------------|---------------|---------------|-----------------|-----------------|
-| 01    | False   | False          | False        | False       | 67.2876%      | 68.3660%      | 66.2092%        | 71.1438%        |
-| 02    | False   | False          | True         | True        | 71.8627%      | 70.7843%      | 81.0458%        | 78.7582%        |
-| 03    | False   | False          | True         | False       | 78.2353%      | 71.2418%      | 79.9020%        | 81.1438%        |
-| 04    | False   | False          | False        | True        | 67.2876%      | 69.5425%      | 70.0000%        | 72.4183%        |
+| 01    | False   | False          | False        | False       | 69.02%        | 66.11%        | 69.71%          | 68.43%          |
+| 02    | False   | False          | True         | True        | 76.44%        | 73.73%        | 79.80%          | 77.65%          |
+| 03    | False   | False          | True         | False       | 74.18%        | 73.17%        | 82.84%          | 76.54%          |
+| 04    | False   | False          | False        | True        | 79.93%        | 71.80%        | 79.28%          | 77.71%          |
+| 05    | False   | False          | False        | False       | 70.23%        | 73.57%        | 67.25%          | 75.92%          |
+| 06    | False   | False          | True         | True        | 77.22%        | 80.85%        | 81.34%          | 84.45%          |
+| 07    | False   | False          | True         | False       | 82.06%        | 70.51%        | 85.39%          | 85.11%          |
+| 08    | False   | False          | False        | True        | 74.87%        | 77.24%        | 80.72%          | 82.50%          |
 
 Full details of each trial are located in this [Google Sheet](https://docs.google.com/spreadsheets/d/1wbaUEhL4T0IqbtWG6HGlXXJpis3WfVbRUYDiIlfPDg4/edit#gid=137534009).
