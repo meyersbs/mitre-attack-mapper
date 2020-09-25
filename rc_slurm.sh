@@ -109,4 +109,7 @@ time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=tactics --appen
 time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=techniques --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_nb_techniques.out
 time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=tactics --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_lsvc_tactics.out
 time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=techniques --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_lsvc_techniques.out
-
+time ./main.py train ./data/CPTC2018-2019.csv --model_type=lsvc --target=tactics --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_lsvc_tactics.out
+time ./main.py train ./data/CPTC2018-2019.csv --model_type=lsvc --target=techniques --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_lsvc_techniques.out
+time ./main.py train ./data/CPTC2018-2019.csv --model_type=nn --target=tactics --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True
+time ./main.py train ./data/CPTC2018-2019.csv --model_type=nn --target=techniques --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True

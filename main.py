@@ -9,18 +9,20 @@ import os
 import sys
 import warnings
 
+
 from collections import Counter
 
 
 #### SCIKITLEARN IMPORTS #######################################################
-from sklearn.externals import joblib
-from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
+import joblib
+from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer, TfidfVectorizer
 from sklearn.linear_model import SGDClassifier
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
 from sklearn.svm import LinearSVC
+from sklearn.neural_network import MLPClassifier
 warnings.filterwarnings("ignore", category=UserWarning)
 
 
@@ -361,6 +363,82 @@ def trainBest(data, labels, target_class, model_type, trial_prefix):
 
     return pipe_best, best_params
 
+# test NN classifer
+
+def trainNN(data, labels, target_class, model_type, trial_prefix):
+    '''
+    In this funcation we train our dataset in a single model (NN)
+    '''
+    X_train, X_test, Y_train, Y_test = trainTestSplit(
+    data, labels, target_class, test_size=0.33)
+    model_map = {"nn": "MLPClassifier"}
+    best_params_file = "{}/{}_{}_{}_best_params.json".format(
+        trial_prefix, trial_prefix, model_map[model_type], target_class)
+
+    # select the best params based on the previous experiment for
+    best_params = dict()
+    with open(os.path.join(MODELS_PATH, best_params_file), "r") as f:
+        best_params = json.load(f)
+
+    pipe_NN = Pipeline([
+        ("vect", TfidfVectorizer(
+            analyzer=best_params["vect__analyzer"],
+            lowercase=best_params["vect__lowercase"],
+            ngram_range=best_params["vect__ngram_range"],
+            stop_words=best_params["vect__stop_words"],
+            strip_accents=best_params["vect__strip_accents"])),
+        ("tfidf", TfidfTransformer(
+            use_idf=best_params["tfidf__use_idf"])),
+        ("clf", MLPClassifier(activation = 'tanh',batch_size=17,alpha=0.00001, max_iter=25))
+
+    ])
+    pipe_NN.fit(X_train, Y_train)
+    print(classification_report(Y_test, pipe_NN.predict(X_test)))
+
+
+def trainLSVC(data, labels, target_class, model_type, trial_prefix):
+    '''
+    In this funcation we train our dataset in a single model (LSVC)
+    '''
+    # split dataset to test and train
+    X_train, X_test, Y_train, Y_test = trainTestSplit(
+        data, labels, target_class, test_size=0.33)
+    model_map = {"lsvc": "LinearSVC"}
+
+    best_params_file = "{}/{}_{}_{}_best_params.json".format(
+        trial_prefix, trial_prefix, model_map[model_type], target_class)
+
+
+    # select the best params based on the previous experiment
+    best_params = dict()
+    with open(os.path.join(MODELS_PATH, best_params_file), "r") as f:
+        best_params = json.load(f)
+
+
+    pipe_best = Pipeline([
+        ("vect", CountVectorizer(
+            analyzer=best_params["vect__analyzer"],
+            lowercase=best_params["vect__lowercase"],
+            ngram_range=best_params["vect__ngram_range"],
+            stop_words=best_params["vect__stop_words"],
+            strip_accents=best_params["vect__strip_accents"])),
+        ("tfidf", TfidfTransformer(
+            use_idf=best_params["tfidf__use_idf"])),
+        ("clf", LinearSVC(
+            dual=best_params["clf__dual"],
+            fit_intercept=best_params["clf__fit_intercept"],
+            loss=best_params["clf__loss"],
+            max_iter=best_params["clf__max_iter"],
+            multi_class=best_params["clf__multi_class"],
+            penalty=best_params["clf__penalty"],
+            tol=best_params["clf__tol"]))
+    ])
+
+    # train and test the dataset in a single model #8
+    pipe_best.fit(X_train, Y_train)
+    pipe_LSVC_predicted = pipe_best.predict(X_test)
+    #print the predection
+    print(classification_report(Y_test, pipe_LSVC_predicted))
 
 #### CLASSIFY FUNCTIONS ########################################################
 def classify(data, target_class, model_type, best_model, data_path):
@@ -376,7 +454,7 @@ def classify(data, target_class, model_type, best_model, data_path):
     """
 
     # Classify new data using best model
-    model_map = {"nb": "MultinomalNB", "lsvc": "LinearSVC"}
+    model_map = {"nb": "MultinomalNB", "lsvc": "LinearSVC", "nn":"MLPClassifier"}
     print("Classifying {} for new data with best {} model.".format(
         target_class, model_map[model_type]))
     predictions = best_model.predict(data)
@@ -407,9 +485,9 @@ if __name__ == "__main__":
         "testing/training. Default: False."
     )
     parser.add_argument(
-        "--model_type", choices=["nb", "lsvc"],
+        "--model_type", choices=["nb", "lsvc", "nn"],
         help="The type of model to use. Either Multinomial Naive Bayes (nb) " 
-        "or Linear Support Vector Classifier (lsvc)."
+        "or Linear Support Vector Classifier (lsvc).""or MLPClassifier(nn)"
     )
     parser.add_argument(
         "--target", choices=["tactics", "techniques"],
@@ -472,7 +550,13 @@ if __name__ == "__main__":
         if args.ignore_singles == True:
             data, hosts, labels = removeSingles(data, hosts, labels, args.target)
         data = augmentData(data, hosts, labels, args.target, args.append_states, args.append_hosts)
-        trainBest(data, labels, args.target, args.model_type, args.trial_prefix)
+        if args.model_type == "lsvc":
+            trainLSVC(data, labels, args.target, args.model_type, args.trial_prefix)
+        if args.model_type == "nn":
+            trainNN(data, labels, args.target,  args.model_type, args.trial_prefix)
+        else:
+            trainBest(data, labels, args.target, args.model_type, args.trial_prefix)
+
     elif args.command == "classify":
         if args.target is None or args.model_type is None or args.trial_prefix is None or args.classify_dataset is None:
             sys.exit("Arguments '--model_type', '--target', '--trial_prefix', "
