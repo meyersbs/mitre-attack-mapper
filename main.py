@@ -4,6 +4,8 @@
 import argparse
 import csv
 import json
+from _operator import itemgetter
+
 import numpy as NP
 import os
 import sys
@@ -15,14 +17,18 @@ from collections import Counter
 
 #### SCIKITLEARN IMPORTS #######################################################
 import joblib
-from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer, TfidfVectorizer
+from mlxtend.preprocessing import DenseTransformer
+from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer, TfidfVectorizer, HashingVectorizer
 from sklearn.linear_model import SGDClassifier
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import FunctionTransformer, OneHotEncoder, Binarizer, OrdinalEncoder
 from sklearn.svm import LinearSVC
 from sklearn.neural_network import MLPClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.feature_selection import RFE
 warnings.filterwarnings("ignore", category=UserWarning)
 
 
@@ -261,6 +267,7 @@ def testLSVC(data, labels, target_class, test_size, trial_prefix):
     X_train, X_test, Y_train, Y_test = trainTestSplit(
         data, labels, target_class, test_size)
 
+
     pipe_LSVC = Pipeline([
         ("vect", CountVectorizer()),
         ("tfidf", TfidfTransformer()),
@@ -306,7 +313,6 @@ def testLSVC(data, labels, target_class, test_size, trial_prefix):
     f = open(params_outfile, "w")
     f.write(json.dumps(best_params))
     f.close()
-
 
 #### TRAIN FUNCTIONS ##########################################################
 def trainBest(data, labels, target_class, model_type, trial_prefix):
@@ -363,14 +369,64 @@ def trainBest(data, labels, target_class, model_type, trial_prefix):
 
     return pipe_best, best_params
 
-# test NN classifer
 
+######################################## test LR classifer         #######################################
+
+def trainLR(data, labels, target_class, model_type, trial_prefix):
+    '''
+    In this funcation we train our dataset in a single model (HMM)
+    '''
+
+    X_train, X_test, Y_train, Y_test = trainTestSplit(
+    data, labels, target_class, test_size=0.33)
+    # the below code to train CPTC 2018 and test 2019. It keep it as reference for future experiment
+    # X_train = X_trai+X_test
+    # Y_train = Y_trai+Y_test
+    # X_test, hosts, Y1= readData("./data/CPTC2019Labeled.csv")
+    # Y_test =list(Y1[target_class])
+
+    model_map = {"lr": "LogisticRegression"}
+    best_params_file = "{}/{}_{}_{}_best_params.json".format(
+        trial_prefix, trial_prefix, model_map[model_type], target_class)
+    with open(os.path.join(MODELS_PATH, best_params_file), "r") as f:
+        best_params = json.load(f)
+    pipe_LR = Pipeline([
+        ("vect", CountVectorizer(
+            analyzer=best_params["vect__analyzer"],
+            lowercase=best_params["vect__lowercase"],
+            ngram_range=best_params["vect__ngram_range"],
+            stop_words=best_params["vect__stop_words"],
+            strip_accents=best_params["vect__strip_accents"])),
+
+              ("tfidf", TfidfTransformer(
+            use_idf=best_params["tfidf__use_idf"])),
+
+        ("clf", LogisticRegression(penalty="l2",
+        solver= "newton-cg",
+        C= 1.0,
+        multi_class="multinomial",
+        verbose= 1000))
+    ])
+
+    pipe_LR.fit(X_train, Y_train)
+    print(classification_report(Y_test, pipe_LR.predict(X_test)))
+
+
+
+######################################## test NN classifer         #######################################
 def trainNN(data, labels, target_class, model_type, trial_prefix):
     '''
     In this funcation we train our dataset in a single model (NN)
     '''
     X_train, X_test, Y_train, Y_test = trainTestSplit(
-    data, labels, target_class, test_size=0.33)
+        data, labels, target_class, test_size=0.33)
+    # the below code to train CPTC 2018 and test 2019. It keep it as reference for future experiment
+    # X_train = X_trai+X_test
+    # Y_train = Y_trai+Y_test
+    # X_test, hosts, Y1= readData("./data/CPTC2019Labeled.csv")
+    # Y_test =list(Y1[target_class])
+
+
     model_map = {"nn": "MLPClassifier"}
     best_params_file = "{}/{}_{}_{}_best_params.json".format(
         trial_prefix, trial_prefix, model_map[model_type], target_class)
@@ -381,7 +437,7 @@ def trainNN(data, labels, target_class, model_type, trial_prefix):
         best_params = json.load(f)
 
     pipe_NN = Pipeline([
-        ("vect", TfidfVectorizer(
+        ("vect", CountVectorizer(
             analyzer=best_params["vect__analyzer"],
             lowercase=best_params["vect__lowercase"],
             ngram_range=best_params["vect__ngram_range"],
@@ -389,13 +445,14 @@ def trainNN(data, labels, target_class, model_type, trial_prefix):
             strip_accents=best_params["vect__strip_accents"])),
         ("tfidf", TfidfTransformer(
             use_idf=best_params["tfidf__use_idf"])),
-        ("clf", MLPClassifier(activation = 'tanh',batch_size=17,alpha=0.00001, max_iter=25))
+        ("clf", MLPClassifier(activation = 'tanh',batch_size=17,alpha=0.0001, max_iter=50))
 
     ])
     pipe_NN.fit(X_train, Y_train)
-    print(classification_report(Y_test, pipe_NN.predict(X_test)))
+    pred =pipe_NN.predict(X_test)
+    print(classification_report(Y_test, pred))
 
-
+######################################## test LSVC classifer         #######################################
 def trainLSVC(data, labels, target_class, model_type, trial_prefix):
     '''
     In this funcation we train our dataset in a single model (LSVC)
@@ -403,6 +460,11 @@ def trainLSVC(data, labels, target_class, model_type, trial_prefix):
     # split dataset to test and train
     X_train, X_test, Y_train, Y_test = trainTestSplit(
         data, labels, target_class, test_size=0.33)
+    # the below code to train CPTC 2018 and test 2019. It keep it as reference for future experiment
+    # X_train = X_trai + X_test
+    # Y_train = Y_trai + Y_test
+    # X_test, hosts, Y1 = readData("./data/CPTC2019Labeled.csv")
+    # Y_test = list(Y1[target_class])
     model_map = {"lsvc": "LinearSVC"}
 
     best_params_file = "{}/{}_{}_{}_best_params.json".format(
@@ -422,6 +484,19 @@ def trainLSVC(data, labels, target_class, model_type, trial_prefix):
             ngram_range=best_params["vect__ngram_range"],
             stop_words=best_params["vect__stop_words"],
             strip_accents=best_params["vect__strip_accents"])),
+        # this RFE, so once you want to verify LSVC with RFE, you can remove the comment
+        # ("rfe", RFE(
+        #     estimator=LinearSVC(
+        #     dual=best_params["clf__dual"],
+        #     fit_intercept=best_params["clf__fit_intercept"],
+        #     loss=best_params["clf__loss"],
+        #     max_iter=best_params["clf__max_iter"],
+        #     multi_class=best_params["clf__multi_class"],
+        #     penalty=best_params["clf__penalty"],
+        #     tol=best_params["clf__tol"]),
+        #     n_features_to_select=20,
+        #     step=1
+        # )),
         ("tfidf", TfidfTransformer(
             use_idf=best_params["tfidf__use_idf"])),
         ("clf", LinearSVC(
@@ -440,6 +515,7 @@ def trainLSVC(data, labels, target_class, model_type, trial_prefix):
     #print the predection
     print(classification_report(Y_test, pipe_LSVC_predicted))
 
+
 #### CLASSIFY FUNCTIONS ########################################################
 def classify(data, target_class, model_type, best_model, data_path):
     """
@@ -454,7 +530,7 @@ def classify(data, target_class, model_type, best_model, data_path):
     """
 
     # Classify new data using best model
-    model_map = {"nb": "MultinomalNB", "lsvc": "LinearSVC", "nn":"MLPClassifier"}
+    model_map = {"nb": "MultinomalNB", "lsvc": "LinearSVC", "nn":"MLPClassifier","lr":"LogisticRegression"}
     print("Classifying {} for new data with best {} model.".format(
         target_class, model_map[model_type]))
     predictions = best_model.predict(data)
@@ -485,9 +561,9 @@ if __name__ == "__main__":
         "testing/training. Default: False."
     )
     parser.add_argument(
-        "--model_type", choices=["nb", "lsvc", "nn"],
+        "--model_type", choices=["nb", "lsvc", "nn","lr"],
         help="The type of model to use. Either Multinomial Naive Bayes (nb) " 
-        "or Linear Support Vector Classifier (lsvc).""or MLPClassifier(nn)"
+        "or Linear Support Vector Classifier (lsvc).""or MLPClassifier(nn)""or Logistic Regression(lr)"
     )
     parser.add_argument(
         "--target", choices=["tactics", "techniques"],
@@ -526,6 +602,7 @@ if __name__ == "__main__":
         data, hosts, labels = readData(args.dataset)
         if args.ignore_singles == True:
             data, hosts, labels = removeSingles(data, hosts, labels, args.target)
+
         printStats(data, labels)
     elif args.command == "test":
         if args.model_type is None or args.target is None:
@@ -547,6 +624,7 @@ if __name__ == "__main__":
                 " required for 'command=train'.")
 
         data, hosts, labels = readData(args.dataset)
+
         if args.ignore_singles == True:
             data, hosts, labels = removeSingles(data, hosts, labels, args.target)
         data = augmentData(data, hosts, labels, args.target, args.append_states, args.append_hosts)
@@ -554,7 +632,12 @@ if __name__ == "__main__":
             trainLSVC(data, labels, args.target, args.model_type, args.trial_prefix)
         if args.model_type == "nn":
             trainNN(data, labels, args.target,  args.model_type, args.trial_prefix)
-        else:
+        if args.model_type == "lr":
+            trainLR(data, labels, args.target, args.model_type, args.trial_prefix)
+
+        #TODO: a condtion should be implemented to reconzie trainBest method, e.g. args.model_type ==trainBEST
+        if args.model_type is None:
+            print("something wrong here")
             trainBest(data, labels, args.target, args.model_type, args.trial_prefix)
 
     elif args.command == "classify":
