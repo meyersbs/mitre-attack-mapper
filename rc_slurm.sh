@@ -24,7 +24,7 @@
 # Email to send notifications to.
 # Format: --mail-user <email@domain.com>
 # Note: To disable emails, place two pound signs before the command.
-#SBATCH --mail-user bsm9339@rit.edu
+#SBATCH --mail-user sa2553@rit.edu
 
 # Nptifications to send.
 # Format: --mail-type=<BEGIN, END, FAIL, ALL>
@@ -48,9 +48,10 @@
 #
 
 # Load python and required libraries
-spack unload python
-spack load py-scikit-learn@0.22 arch=linux-rhel7-x86_64
-spack load py-setuptools@41.4.0 arch=linux-rhel7-x86_64
+module load python/3.6.8-gcc-7.4.0-vxoqdckc
+module load py-scikit-learn/0.22-gcc-7.4.0-bblye5gz
+module load py-setuptools/41.4.0-gcc-7.4.0-b2jtwgcf
+module load py-joblib/0.14.0-gcc-7.4.0-wulqogpo
 
 # Run the code
 
@@ -105,19 +106,12 @@ spack load py-setuptools@41.4.0 arch=linux-rhel7-x86_64
 
 # TRIAL 08
 time ./main.py info ./data/CPTC2018.csv --target=tactics >> trial08_info.out
-time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=tactics --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_nb_tactics.out
-time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=techniques --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_nb_techniques.out
-time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=tactics --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_lsvc_tactics.out
-time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=techniques --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_lsvc_techniques.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=tactics --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_nb_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=nb --target=techniques --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_nb_techniques.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=tactics --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_lsvc_tactics.out
+#time ./main.py test ./data/CPTC2018.csv --model_type=lsvc --target=techniques --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_lsvc_techniques.out
 
-# TRIAL
-time ./main.py train ./data/CPTC2018-2019.csv --model_type=lsvc --target=tactics --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_lsvc_tactics.out
-time ./main.py train ./data/CPTC2018-2019.csv --model_type=lsvc --target=techniques --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_lsvc_techniques.out
-time ./main.py train ./data/CPTC2018-2019.csv --model_type=nn --target=tactics --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True
-time ./main.py train ./data/CPTC2018-2019.csv --model_type=nn --target=techniques --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True
-time ./main.py train ./data/CPTC2018-2019.csv --model_type=lr --target=tactics --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True
-time ./main.py test ./data/CPTC2018.csv --model_type=nn --target=tactics --append_states=False --append_hosts=True --trial_prefix=trial09 --ignore_singles=True
-time ./main.py train ./data/CPTC2018-2019.csv --model_type=lr --target=techniques --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True
-
-
-
+time ./main.py test ./data/CPTC2018.csv --model_type=nn --target=tactics --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_nn_tactics.out
+time ./main.py test ./data/CPTC2018.csv --model_type=nn --target=techniques --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_nn_techniques.out
+time ./main.py test ./data/CPTC2018.csv --model_type=lr --target=tactics --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_lr_tactics.out
+time ./main.py test ./data/CPTC2018.csv --model_type=lr --target=techniques --append_states=False --append_hosts=True --trial_prefix=trial08 --ignore_singles=True >> trial08_lr_techniques.out

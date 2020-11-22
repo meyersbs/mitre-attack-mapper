@@ -17,15 +17,14 @@ from collections import Counter
 
 #### SCIKITLEARN IMPORTS #######################################################
 import joblib
-from mlxtend.preprocessing import DenseTransformer
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer, TfidfVectorizer, HashingVectorizer
 from sklearn.linear_model import SGDClassifier
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import FunctionTransformer, OneHotEncoder, Binarizer, OrdinalEncoder
 from sklearn.svm import LinearSVC
+from sklearn.naive_bayes import MultinomialNB
 from sklearn.neural_network import MLPClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.feature_selection import RFE
@@ -258,7 +257,108 @@ def testMNB(data, labels, target_class, test_size, trial_prefix):
     f.write(json.dumps(best_params))
     f.close()
 
+############################################       TEST LR   ############################################################
+def testLR(data, labels, target_class, test_size, trial_prefix):
+    '''
+    In this funcation we TEST our dataset in a single model (LR)
+    '''
+    X_train, X_test, Y_train, Y_test = trainTestSplit(
+    data, labels, target_class, test_size=test_size)
 
+    pipe = Pipeline([
+        ("vect", CountVectorizer()),
+        ("tfidf", TfidfTransformer()),
+        ("clf", LogisticRegression())
+    ])
+
+    # All combinations of these parameters will be tested
+    GS_LR_params = {
+        "vect__ngram_range": [(1, 1), (1, 2), (1, 3), (2, 2), (2, 3), (3, 3)],
+        "vect__stop_words": (None, "english"),
+        "vect__strip_accents": (None, "ascii", "unicode"),
+        "vect__analyzer": ("word", "char", "char_wb"),
+        "vect__lowercase": (True, False),
+        "tfidf__use_idf": (True, False),
+        "clf__penalty": ("l2","elasticnet"),
+        "clf__tol": (1e-1, 1e-4, 1e-10),
+        "clf__fit_intercept": (True, False),
+        "clf__max_iter": (1000, 5000),
+        "clf__solver": ("lbfgs","sag","saga"),
+        "clf__C":(1.0,100.0,0.1)
+    }
+    # Test all combinations of GS_LSV_params using 10-fold CV and all available CPU's
+    pipe_GS = GridSearchCV(pipe, GS_LR_params, cv=10, n_jobs=-1, verbose=1)
+    pipe_GS.fit(X_train, Y_train)
+
+    best_params = pipe_GS.best_params_
+    print("Best Score for LogisticRegression:")
+    print("    {}".format(pipe_GS.best_score_))
+    print("Best Parameters for LogisticRegression:")
+    for p in sorted(GS_LR_params.keys()):
+        print("    {}: {}".format(p, best_params[p]))
+
+    pipe_predicted = pipe_GS.predict(X_test)
+    print(classification_report(Y_test, pipe_predicted))
+
+    # Dump best model to disk
+    outfile = os.path.join(MODELS_PATH, "{}LogisticRegression{}_best.pkl".format(trial_prefix, target_class))
+    joblib.dump(pipe.best_estimator_, outfile)
+    # Dump best model parameters to disk
+    params_outfile = os.path.join(MODELS_PATH, "{}LogisticRegression{}_best_params.json".format(trial_prefix, target_class))
+    f = open(params_outfile, "w")
+    f.write(json.dumps(best_params))
+    f.close()
+############################################      TEST NN   ############################################################
+def testNN(data, labels, target_class, test_size, trial_prefix):
+    '''
+    In this funcation we TEST our dataset in a single model (NN)
+    '''
+    X_train, X_test, Y_train, Y_test = trainTestSplit(
+    data, labels, target_class, test_size=test_size)
+
+    pipe = Pipeline([
+        ("vect", CountVectorizer()),
+        ("tfidf", TfidfTransformer()),
+        ("clf", MLPClassifier())
+    ])
+
+    # All combinations of these parameters will be tested
+    GS_NN_params = {
+        "vect__ngram_range": [(1, 1), (1, 2), (1, 3), (2, 2), (2, 3), (3, 3)],
+        "vect__stop_words": (None, "english"),
+        "vect__strip_accents": (None, "ascii", "unicode"),
+        "vect__analyzer": ("word", "char", "char_wb"),
+        "vect__lowercase": (True, False),
+        "tfidf__use_idf": (True, False),
+        "clf__tol": (1e-1, 1e-4, 1e-10),
+        "clf__max_iter": (1000,5000),
+        "clf__activation":("identity", "logistic", "tanh", "relu"),
+        "clf__solver": ("adam", "sgd", "lbfgs"),
+        "clf__batch_size":(10,17,25,50,75,100),
+        "clf__learning_rate":("constant","invscaling","adaptive")
+    }
+    # Test all combinations of GS_LSV_params using 10-fold CV and all available CPU's
+    pipe_GS = GridSearchCV(pipe, GS_NN_params, cv=10, n_jobs=-1, verbose=1)
+    pipe_GS.fit(X_train, Y_train)
+
+    best_params = pipe_GS.best_params_
+    print("Best Score for MLPClassifier:")
+    print("    {}".format(pipe_GS.best_score_))
+    print("Best Parameters for MLPClassifier:")
+    for p in sorted(GS_NN_params.keys()):
+        print("    {}: {}".format(p, best_params[p]))
+
+    pipe_predicted = pipe_GS.predict(X_test)
+    print(classification_report(Y_test, pipe_predicted))
+
+    # Dump best model to disk
+    outfile = os.path.join(MODELS_PATH, "{}MLPClassifier{}_best.pkl".format(trial_prefix, target_class))
+    joblib.dump(pipe.best_estimator_, outfile)
+    # Dump best model parameters to disk
+    params_outfile = os.path.join(MODELS_PATH, "{}MLPClassifier{}_best_params.json".format(trial_prefix, target_class))
+    f = open(params_outfile, "w")
+    f.write(json.dumps(best_params))
+    f.close()
 def testLSVC(data, labels, target_class, test_size, trial_prefix):
     """
     Train and test the performance of LinearSVC with various parameter
@@ -385,6 +485,7 @@ def trainLR(data, labels, target_class, model_type, trial_prefix):
     # X_test, hosts, Y1= readData("./data/CPTC2019Labeled.csv")
     # Y_test =list(Y1[target_class])
 
+
     model_map = {"lr": "LogisticRegression"}
     best_params_file = "{}/{}_{}_{}_best_params.json".format(
         trial_prefix, trial_prefix, model_map[model_type], target_class)
@@ -397,15 +498,27 @@ def trainLR(data, labels, target_class, model_type, trial_prefix):
             ngram_range=best_params["vect__ngram_range"],
             stop_words=best_params["vect__stop_words"],
             strip_accents=best_params["vect__strip_accents"])),
-
-              ("tfidf", TfidfTransformer(
+        ####### TO TRAIN LSVC WITH RFE ######
+        # ("rfe", RFE(
+        #     estimator=LogisticRegression(
+        #     penalty=best_params["clf__penalty"],
+        #     solver= best_params["clf__solver"],
+        #     C=best_params["clf__C"],
+        #     max_iter=best_params["clf__max_iter"],
+        #     fit_intercept=best_params["clf__fit_intercept"],
+        #     tol= best_params["clf__tol"]),
+        #     n_features_to_select=30,
+        #     step=1
+        # )),
+        ("tfidf", TfidfTransformer(
             use_idf=best_params["tfidf__use_idf"])),
-
-        ("clf", LogisticRegression(penalty="l2",
-        solver= "newton-cg",
-        C= 1.0,
-        multi_class="multinomial",
-        verbose= 1000))
+        ("clf", LogisticRegression(
+            penalty=best_params["clf__penalty"],
+            solver= best_params["clf__solver"],
+            C=best_params["clf__C"],
+            max_iter=best_params["clf__max_iter"],
+            fit_intercept=best_params["clf__fit_intercept"],
+            tol= best_params["clf__tol"]))
     ])
 
     pipe_LR.fit(X_train, Y_train)
@@ -418,13 +531,13 @@ def trainNN(data, labels, target_class, model_type, trial_prefix):
     '''
     In this funcation we train our dataset in a single model (NN)
     '''
-    X_train, X_test, Y_train, Y_test = trainTestSplit(
+    X_trai, X_test, Y_trai, Y_test = trainTestSplit(
         data, labels, target_class, test_size=0.33)
     # the below code to train CPTC 2018 and test 2019. It keep it as reference for future experiment
-    # X_train = X_trai+X_test
-    # Y_train = Y_trai+Y_test
-    # X_test, hosts, Y1= readData("./data/CPTC2019Labeled.csv")
-    # Y_test =list(Y1[target_class])
+    X_train = X_trai+X_test
+    Y_train = Y_trai+Y_test
+    X_test, hosts, Y1= readData("./data/CPTC2018.csv")
+    Y_test =list(Y1[target_class])
 
 
     model_map = {"nn": "MLPClassifier"}
@@ -445,7 +558,7 @@ def trainNN(data, labels, target_class, model_type, trial_prefix):
             strip_accents=best_params["vect__strip_accents"])),
         ("tfidf", TfidfTransformer(
             use_idf=best_params["tfidf__use_idf"])),
-        ("clf", MLPClassifier(activation = 'tanh',batch_size=17,alpha=0.0001, max_iter=50))
+        ("clf", MLPClassifier(activation = 'tanh',batch_size=17,alpha=0.00001, max_iter=20))
 
     ])
     pipe_NN.fit(X_train, Y_train)
@@ -460,10 +573,10 @@ def trainLSVC(data, labels, target_class, model_type, trial_prefix):
     # split dataset to test and train
     X_train, X_test, Y_train, Y_test = trainTestSplit(
         data, labels, target_class, test_size=0.33)
-    # the below code to train CPTC 2018 and test 2019. It keep it as reference for future experiment
+    # the below code to train CPTC 2018 and test 2019 and vice versa. It keep it as reference for future experiment
     # X_train = X_trai + X_test
     # Y_train = Y_trai + Y_test
-    # X_test, hosts, Y1 = readData("./data/CPTC2019Labeled.csv")
+    # X_test, hosts, Y1 = readData("./data/CPTC2018.csv")
     # Y_test = list(Y1[target_class])
     model_map = {"lsvc": "LinearSVC"}
 
@@ -484,7 +597,7 @@ def trainLSVC(data, labels, target_class, model_type, trial_prefix):
             ngram_range=best_params["vect__ngram_range"],
             stop_words=best_params["vect__stop_words"],
             strip_accents=best_params["vect__strip_accents"])),
-        # this RFE, so once you want to verify LSVC with RFE, you can remove the comment
+        ####### TO TRAIN LSVC WITH RFE ######
         # ("rfe", RFE(
         #     estimator=LinearSVC(
         #     dual=best_params["clf__dual"],
@@ -494,7 +607,7 @@ def trainLSVC(data, labels, target_class, model_type, trial_prefix):
         #     multi_class=best_params["clf__multi_class"],
         #     penalty=best_params["clf__penalty"],
         #     tol=best_params["clf__tol"]),
-        #     n_features_to_select=20,
+        #     n_features_to_select=40,
         #     step=1
         # )),
         ("tfidf", TfidfTransformer(
@@ -616,6 +729,10 @@ if __name__ == "__main__":
         
         if args.model_type == "nb":
             testMNB(data, labels, args.target, 0.33, args.trial_prefix)
+        if args.model_type == "lr":
+            testLR(data, labels, args.target, 0.33, args.trial_prefix)
+        if args.model_type == "nn":
+            testNN(data, labels, args.target, 0.33, args.trial_prefix)
         elif args.model_type == "lsvc":
             testLSVC(data, labels, args.target, 0.33, args.trial_prefix)
     elif args.command == "train":
@@ -635,9 +752,8 @@ if __name__ == "__main__":
         if args.model_type == "lr":
             trainLR(data, labels, args.target, args.model_type, args.trial_prefix)
 
-        #TODO: a condtion should be implemented to reconzie trainBest method, e.g. args.model_type ==trainBEST
+
         if args.model_type is None:
-            print("something wrong here")
             trainBest(data, labels, args.target, args.model_type, args.trial_prefix)
 
     elif args.command == "classify":
